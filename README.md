@@ -4,7 +4,7 @@ PromptCraft-Web is the frontend repository for the PromptCraft web application, 
 
 ## Project Architecture
 - React/Next.js for the framework
-- Redux for state management
+- Recoil for state management
 - Styled Components for CSS styling
 - Axios for API requests
 - Jest and React-testing-library for testing
