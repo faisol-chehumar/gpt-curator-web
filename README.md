@@ -28,3 +28,13 @@ PromptCraft-Web is the frontend repository for the PromptCraft web application, 
 - Search view with prompt list filtered by search query
 - Navigation menu with links to various views
 - Footer with social media links and about section
+
+## Functional Requirements
+
+Based on the information provided, PromptCraft has the following core functionalities:
+
+1. User registration and authentication
+2. Prompt creation and management
+3. Generative image creation
+4. Image sharing
+5. User interaction and feedback
