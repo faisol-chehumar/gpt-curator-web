@@ -1,6 +1,10 @@
 # PromptCraft-Web
 PromptCraft-Web is the frontend repository for the PromptCraft web application, providing users with a user-friendly interface to discover prompts. With a focus on creative design and art, PromptCraft-Web allows users to browse a curated collection of prompts and access tips and tricks for working with generative image AI.
 
+## UX/UI reference
+- [Landing page](https://dribbble.com/shots/18938241-AstroClash-Play-to-Earn-NFT-Marketplace-Kit)
+- [In general](https://dribbble.com/shots/18847976-Kalao-Web-Design-for-NFT-Marketplace)
+
 
 ## Project Architecture
 - React/Next.js for the framework
