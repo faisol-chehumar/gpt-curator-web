@@ -1,10 +1,18 @@
-import { Container } from '@/shared/components';
+import { Container, Typography } from '@/shared/components';
+
+const { HeroHeadline, HeroTagline } = Typography;
 
 export default function Home() {
   return (
-    <div className="min-h-screen min-w-full bg-dark-primary text-white">
+    <div
+      data-testid="hero-section"
+      className="min-h-screen min-w-full bg-dark-primary text-white"
+    >
       <Container>
-        <h1>Unlock your creativity with PromptCraft.</h1>
+        <HeroHeadline>Unlock your creativity with PromptCraft.</HeroHeadline>
+        <HeroTagline>
+          Unleash your imagination with our curated prompts
+        </HeroTagline>
       </Container>
     </div>
   );
