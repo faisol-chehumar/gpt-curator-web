@@ -1,5 +1,6 @@
 const colors = require('./src/styles/tokens/colors.json');
 const spaces = require('./src/styles/tokens/spaces.json');
+const fonSizes = require('./src/styles/tokens/font-sizes.json');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -27,6 +28,10 @@ module.exports = {
       },
       maxWidth: {
         'screen-xxl': 1440,
+      },
+      fontSize: {
+        'hero-headline': [fonSizes.hero_headline, 1],
+        'hero-tagline': [fonSizes.hero_tagline, 1],
       },
     },
   },

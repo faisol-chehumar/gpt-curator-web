@@ -1,0 +1,9 @@
+{
+  "small": "12px",
+  "normal": "16px",
+  "medium": "20px",
+  "large": "24px",
+  "extra_large": "32px",
+  "hero_headline": "3.75rem",
+  "hero_tagline": "1.5rem"
+}
