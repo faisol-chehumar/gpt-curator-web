@@ -30,7 +30,7 @@ module.exports = {
         'screen-xxl': 1440,
       },
       fontSize: {
-        'hero-headline': [fonSizes.hero_headline, 1],
+        'hero-headline': [fonSizes.hero_headline, 1.2],
         'hero-tagline': [fonSizes.hero_tagline, 1],
       },
     },
