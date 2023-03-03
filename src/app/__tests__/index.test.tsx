@@ -7,10 +7,14 @@ describe('Home', () => {
   it('renders a heading', () => {
     render(<Home />);
 
-    const heading = screen.getByRole('heading', {
+    const title = screen.getByRole('heading', {
       name: /Unlock your creativity with PromptCraft./i,
     });
+    const subTitle = screen.getByText(
+      /Unleash your imagination with our curated prompts/i
+    );
 
-    expect(heading).toBeInTheDocument();
+    expect(title).toBeInTheDocument();
+    expect(subTitle).toBeInTheDocument();
   });
 });
