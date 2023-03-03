@@ -1,4 +1,5 @@
 import AppInfo from '@/shared/static-text/app-info.json';
+import { inter, poppins } from '@/app/fonts';
 
 import '../styles/globals.css';
 
@@ -17,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${poppins.className}`}>{children}</body>
     </html>
   );
 }

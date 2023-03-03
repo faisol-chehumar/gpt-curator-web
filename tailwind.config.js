@@ -1,8 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-
 const colors = require('./src/styles/tokens/colors.json');
 const spaces = require('./src/styles/tokens/spaces.json');
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -18,13 +17,16 @@ module.exports = {
         'dark-primary': colors.charcoal_gray,
       },
       spacing: {
-        xs: '4px',
-        sm: '8px',
-        md: '16px',
-        lg: '24px',
-        xl: '32px',
-        xxl: '48px',
-        xxxl: '64px',
+        xxs: spaces.xxs,
+        xs: spaces.xs,
+        sm: spaces.sm,
+        md: spaces.md,
+        lg: spaces.lg,
+        xl: spaces.xl,
+        xxl: spaces.xxl,
+      },
+      maxWidth: {
+        'screen-xxl': 1440,
       },
     },
   },
