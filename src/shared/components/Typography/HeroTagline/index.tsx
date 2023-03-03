@@ -1,11 +1,16 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseTypography } from '@/shared/types/commons';
 import { openSans } from '@/app/fonts';
 
-const HeroTagline = ({ children }: BaseTypography) => {
-  const classes = classNames(openSans.className, 'text-hero-tagline');
+import { BaseTypography } from '../typography.types';
+
+const HeroTagline = ({ children, color }: BaseTypography) => {
+  const classes = classNames(
+    openSans.className,
+    'text-hero-tagline',
+    `text-${color}`
+  );
 
   return <span className={classes}>{children}</span>;
 };
