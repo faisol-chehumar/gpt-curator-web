@@ -1,7 +1,11 @@
+import { Container } from '@/shared/components';
+
 export default function Home() {
   return (
-    <h1 className="bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:py-3 sm:px-8">
-      Hello world!
-    </h1>
+    <div className="min-h-screen min-w-full bg-dark-primary text-white">
+      <Container>
+        <h1>Unlock your creativity with PromptCraft.</h1>
+      </Container>
+    </div>
   );
 }
