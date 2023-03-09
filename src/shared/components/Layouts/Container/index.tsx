@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Container } from './container.types';
+import { ContainerProps } from '@/shared/components/Layouts/types';
 
-const Container = ({ children }: Container) => {
+const Container = ({ children }: ContainerProps) => {
   return (
-    <div className="m-auto max-w-screen-md px-lg lg:max-w-screen-xxl">
+    <div className="container m-auto max-w-screen-md px-lg lg:max-w-screen-xxl">
       {children}
     </div>
   );
