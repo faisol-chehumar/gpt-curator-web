@@ -15,7 +15,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dark-primary': colors.charcoal_gray,
+        dark: colors.charcoal_gray,
+        primary: colors.primary,
       },
       spacing: {
         xxs: spaces.xxs,
