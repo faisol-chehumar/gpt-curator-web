@@ -1,4 +1,4 @@
-import AppInfo from '@/shared/static-text/app-info.json';
+import AppInfo from '@/shared/static-texts/app-info.json';
 import { poppins } from '@/app/fonts';
 
 import '../styles/globals.css';
