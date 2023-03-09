@@ -7,5 +7,6 @@ export type Colors =
   | 'primary'
   | 'secondary'
   | 'dark'
+  | 'lighter-dark'
   | 'white'
   | 'black';

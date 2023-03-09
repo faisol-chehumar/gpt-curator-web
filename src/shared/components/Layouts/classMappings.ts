@@ -3,6 +3,7 @@ export const BG_COLOR_MAPS = {
   primary: 'bg-primary',
   secondary: 'bg-secondary',
   dark: 'bg-dark',
+  'lighter-dark': 'bg-lighter-dark',
   white: 'bg-white',
   black: 'bg-black',
 };

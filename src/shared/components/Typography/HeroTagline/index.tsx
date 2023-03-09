@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { openSans } from '@/app/fonts';
 
 import { BaseTypography } from '@/shared/components/Typography/types';
+import { TEXT_COLOR_MAPS } from '../classMappings';
 
 const HeroTagline: React.FC<BaseTypography> = ({
   children,
@@ -12,7 +13,7 @@ const HeroTagline: React.FC<BaseTypography> = ({
   const classes = classNames(
     openSans.className,
     'text-hero-tagline',
-    `text-${color}`
+    TEXT_COLOR_MAPS[color]
   );
 
   return <span className={classes}>{children}</span>;

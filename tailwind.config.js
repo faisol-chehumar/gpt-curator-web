@@ -16,6 +16,7 @@ module.exports = {
     extend: {
       colors: {
         dark: colors.charcoal_gray,
+        'lighter-dark': colors.slate_gray,
         primary: colors.primary,
       },
       spacing: {

@@ -4,5 +4,6 @@
   "success": "#28a745",
   "warning": "#ffc107",
   "error": "#dc3545",
-  "charcoal_gray": "#212228"
+  "charcoal_gray": "#212228",
+  "slate_gray": "#72767d"
 }

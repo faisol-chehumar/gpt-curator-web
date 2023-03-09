@@ -7,8 +7,7 @@ import {
   HEIGHT_MAPS,
   DIRECTION_MAPS,
   ITEM_ALIGN_MAPS,
-} from '../classMappings';
-
+} from '@/shared/components/Layouts/classMappings';
 import { FlexProps } from '@/shared/components/Layouts/types';
 
 const Flex: React.FC<FlexProps> = ({

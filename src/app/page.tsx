@@ -17,7 +17,7 @@ export default function Home() {
               <Highlight color="primary">Unlock</Highlight> your creativity with
               PromptCraft.
             </HeroHeadline>
-            <HeroTagline color="white">
+            <HeroTagline color="lighter-dark">
               Unleash your imagination with our curated prompts
             </HeroTagline>
           </Box>
