@@ -24,6 +24,8 @@ export interface FlexProps extends BaseLayoutProps {
   alignItems?: AlignItems;
 }
 
+type Spaces = 'none' | 'lg';
 export interface SectionProps extends PropsWithChildren {
   bgColor?: Colors;
+  paddingY?: Spaces;
 }

@@ -5,7 +5,7 @@ const { HeroHeadline, HeroTagline, Highlight } = Typography;
 
 export default function Home() {
   return (
-    <Section data-testid="hero-section" bgColor="dark">
+    <Section data-testid="hero-section" bgColor="dark" paddingY="lg">
       <Container>
         <Flex
           width={{ mobile: 'full', tablet: 'full', desktop: '500px' }}

@@ -49,9 +49,14 @@ export const DIRECTION_MAPS = {
 };
 
 export const ITEM_ALIGN_MAPS = {
-  start: 'items-start	',
+  start: 'items-start',
   end: 'items-end	',
   center: 'items-center	',
   baseline: 'items-baseline	',
   stretch: 'items-stretch',
+};
+
+export const PADDING_Y_MAPS = {
+  none: 'py-0',
+  lg: 'py-lg',
 };
