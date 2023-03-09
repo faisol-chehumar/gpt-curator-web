@@ -3,9 +3,12 @@ import classNames from 'classnames';
 
 import { openSans } from '@/app/fonts';
 
-import { BaseTypography } from '../typography.types';
+import { BaseTypography } from '@/shared/components/Typography/types';
 
-const HeroTagline = ({ children, color }: BaseTypography) => {
+const HeroTagline: React.FC<BaseTypography> = ({
+  children,
+  color = 'black',
+}) => {
   const classes = classNames(
     openSans.className,
     'text-hero-tagline',
