@@ -1,10 +1,10 @@
 import { Colors, Devices, PropsWithChildren } from '@/shared/types/commons';
 
-export type Widths = 'full' | 'fullScreen' | '500px';
+export type Widths = 'full' | 'fullScreen' | '5/12' | '7/12';
 export type LayoutWidths = {
   [key in Devices]: Widths;
 };
-export type Heights = 'fit' | '40rem';
+export type Heights = 'fit' | 'full' | '40rem' | '16rem';
 export type LayoutHeights = {
   [key in Devices]: Heights;
 };
@@ -18,7 +18,10 @@ export interface ContainerProps extends PropsWithChildren {}
 export interface BoxProps extends BaseLayoutProps {}
 
 type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
-type FlexDirection = 'row' | 'row-reverse' | 'col' | 'col-reverse';
+type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';
+export type FlexDirection = {
+  [key in Devices]: Direction;
+};
 export interface FlexProps extends BaseLayoutProps {
   direction?: FlexDirection;
   alignItems?: AlignItems;

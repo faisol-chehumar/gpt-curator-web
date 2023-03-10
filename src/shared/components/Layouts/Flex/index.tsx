@@ -13,14 +13,16 @@ import { FlexProps } from '@/shared/components/Layouts/types';
 const Flex: React.FC<FlexProps> = ({
   children,
   bgColor = 'transparent',
-  width = { mobile: 'full', tablet: 'fullScreen', desktop: '500px' },
+  width = { mobile: 'full', tablet: 'full', desktop: 'full' },
   height = { mobile: 'fit', tablet: 'fit', desktop: 'fit' },
-  direction = 'row',
+  direction = { mobile: 'col-reverse', tablet: 'row', desktop: 'row' },
   alignItems = 'start',
 }) => {
   const classes = classNames(
     'flex',
-    DIRECTION_MAPS[direction],
+    DIRECTION_MAPS.mobile[direction.mobile],
+    DIRECTION_MAPS.tablet[direction.tablet],
+    DIRECTION_MAPS.desktop[direction.desktop],
     ITEM_ALIGN_MAPS[alignItems],
     BG_COLOR_MAPS[bgColor],
     WIDTH_MAPS.mobile[width.mobile],

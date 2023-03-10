@@ -15,6 +15,7 @@ const Box: React.FC<BoxProps> = ({
   height = { mobile: 'fit', tablet: 'fit', desktop: 'fit' },
 }) => {
   const classes = classNames(
+    'relative',
     BG_COLOR_MAPS[bgColor],
     WIDTH_MAPS.mobile[width.mobile],
     WIDTH_MAPS.tablet[width.tablet],
