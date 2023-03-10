@@ -1,5 +1,5 @@
 import AppInfo from '@/shared/static-texts/app-info.json';
-import { poppins } from '@/app/fonts';
+import { poppins } from '@/shared/fonts';
 
 import '../styles/globals.css';
 

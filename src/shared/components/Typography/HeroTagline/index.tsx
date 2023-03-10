@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { openSans } from '@/app/fonts';
+import { openSans } from '@/shared/fonts';
 
 import { BaseTypography } from '@/shared/components/Typography/types';
 import { TEXT_COLOR_MAPS } from '../classMappings';

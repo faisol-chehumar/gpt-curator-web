@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { openSans } from '@/app/fonts';
+import { openSans } from '@/shared/fonts';
 
 import { BaseTypography } from '@/shared/components/Typography/types';
 
