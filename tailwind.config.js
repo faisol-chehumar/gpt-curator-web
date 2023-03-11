@@ -17,7 +17,11 @@ module.exports = {
       colors: {
         dark: colors.charcoal_gray,
         'lighter-dark': colors.slate_gray,
-        primary: colors.primary,
+        primary: {
+          light: colors.primary_lighter,
+          DEFAULT: colors.primary,
+          dark: colors.primary_darker,
+        },
       },
       spacing: {
         xxs: spaces.xxs,

@@ -1,5 +1,7 @@
 {
+  "primary_lighter": "#0079ff",
   "primary": "#0070f3",
+  "primary_darker": "#0051b3",
   "secondary": "#6c757d",
   "success": "#28a745",
   "warning": "#ffc107",
