@@ -1,6 +1,9 @@
 import AppInfo from '@/shared/static-texts/app-info.json';
 import { poppins } from '@/shared/fonts';
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 import '../styles/globals.css';
 
 export const metadata = {
