@@ -12,7 +12,7 @@ const { HeroHeadline, HeroTagline, Highlight } = Typography;
 
 const HeroSection = () => {
   return (
-    <Section data-testid="hero-section" bgColor="dark" paddingY="lg">
+    <Section testId="hero-section" bgColor="dark" paddingY="large">
       <Container>
         <Flex
           width={{
