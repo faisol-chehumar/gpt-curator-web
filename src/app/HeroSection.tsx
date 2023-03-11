@@ -32,13 +32,7 @@ const HeroSection = () => {
             <HeroTagline color="lighter-dark">
               Unleash your imagination with our curated prompts
             </HeroTagline>
-            <Button
-              onClick={() => {
-                console.log('xx');
-              }}
-            >
-              Explore
-            </Button>
+            <Button>Explore</Button>
           </Box>
           <Box
             width={{ mobile: 'full', tablet: 'full', desktop: '7/12' }}
