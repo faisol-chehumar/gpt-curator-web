@@ -87,3 +87,21 @@ export const PADDING_Y_MAPS = {
   none: 'py-0',
   lg: 'py-lg',
 };
+
+export const ALIGN_MAPS = {
+  mobile: {
+    left: 'text-left',
+    center: 'text-center',
+    right: 'text-right',
+  },
+  tablet: {
+    left: 'md:text-left',
+    center: 'md:text-center',
+    right: 'md:text-right',
+  },
+  desktop: {
+    left: 'lg:text-left',
+    center: 'lg:text-center',
+    right: 'lg:text-right',
+  },
+};

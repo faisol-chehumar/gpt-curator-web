@@ -1,4 +1,4 @@
-import { Colors, Devices, PropsWithChildren } from '@/shared/types/commons';
+import { Colors, Devices, BaseProps } from '@/shared/types/commons';
 
 export type Widths = 'full' | 'fullScreen' | '5/12' | '7/12';
 export type LayoutWidths = {
@@ -9,13 +9,20 @@ export type LayoutHeights = {
   [key in Devices]: Heights;
 };
 
-export interface BaseLayoutProps extends PropsWithChildren {
+export interface BaseLayoutProps extends BaseProps {
   bgColor?: Colors;
   width?: LayoutWidths;
   height?: LayoutHeights;
 }
-export interface ContainerProps extends PropsWithChildren {}
-export interface BoxProps extends BaseLayoutProps {}
+export interface ContainerProps extends BaseProps {}
+
+export type aligns = 'left' | 'center' | 'right';
+export type LayoutAligns = {
+  [key in Devices]: aligns;
+};
+export interface BoxProps extends BaseLayoutProps {
+  align?: LayoutAligns;
+}
 
 type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
 type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';
@@ -28,7 +35,7 @@ export interface FlexProps extends BaseLayoutProps {
 }
 
 type Spaces = 'none' | 'lg';
-export interface SectionProps extends PropsWithChildren {
+export interface SectionProps extends BaseProps {
   bgColor?: Colors;
   paddingY?: Spaces;
 }
