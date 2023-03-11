@@ -4,19 +4,21 @@ import classNames from 'classnames';
 import { openSans } from '@/shared/fonts';
 
 import { BaseTypography } from '@/shared/components/Typography/types';
-import { TEXT_COLOR_MAPS } from '../classMappings';
+import { TEXT_COLOR_MAPS, TEXT_MARGIN_BOTTOMS } from '../classMappings';
 
 const HeroTagline: React.FC<BaseTypography> = ({
   children,
   color = 'black',
+  mb = 'large',
 }) => {
   const classes = classNames(
+    'text-hero-tagline leading-tight',
     openSans.className,
-    'text-hero-tagline',
-    TEXT_COLOR_MAPS[color]
+    TEXT_COLOR_MAPS[color],
+    TEXT_MARGIN_BOTTOMS[mb]
   );
 
-  return <span className={classes}>{children}</span>;
+  return <p className={classes}>{children}</p>;
 };
 
 export default HeroTagline;

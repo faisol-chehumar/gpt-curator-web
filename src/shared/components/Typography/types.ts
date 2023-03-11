@@ -1,7 +1,9 @@
-import { PropsWithChildren, Colors } from '@/shared/types/commons';
+import { BaseProps, Colors, Sizes } from '@/shared/types/commons';
 
-export type TypographyColors = Exclude<Colors, 'transparent'> | 'inherit';
+type TypographyColors = Exclude<Colors, 'transparent'> | 'inherit';
+type TypographyMargins = Sizes | 'none';
 
-export interface BaseTypography extends PropsWithChildren {
+export interface BaseTypography extends BaseProps {
   color?: TypographyColors;
+  mb?: TypographyMargins;
 }
