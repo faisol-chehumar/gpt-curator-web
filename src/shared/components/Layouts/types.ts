@@ -1,4 +1,4 @@
-import { Colors, Devices, BaseProps } from '@/shared/types/commons';
+import { Colors, Devices, BaseProps, Sizes } from '@/shared/types/commons';
 
 export type Widths = 'full' | 'fullScreen' | '5/12' | '7/12';
 export type LayoutWidths = {
@@ -34,7 +34,7 @@ export interface FlexProps extends BaseLayoutProps {
   alignItems?: AlignItems;
 }
 
-type Spaces = 'none' | 'lg';
+type Spaces = 'none' | Sizes;
 export interface SectionProps extends BaseProps {
   bgColor?: Colors;
   paddingY?: Spaces;

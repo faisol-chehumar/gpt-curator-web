@@ -4,6 +4,7 @@ export const BG_COLOR_MAPS = {
   secondary: 'bg-secondary',
   dark: 'bg-dark',
   'lighter-dark': 'bg-lighter-dark',
+  'darker-dark': 'bg-darker-dark',
   white: 'bg-white',
   black: 'bg-black',
 };
@@ -85,7 +86,10 @@ export const ITEM_ALIGN_MAPS = {
 
 export const PADDING_Y_MAPS = {
   none: 'py-0',
-  lg: 'py-lg',
+  small: 'py-xs',
+  base: 'py-base',
+  medium: 'py-md',
+  large: 'py-xxl',
 };
 
 export const ALIGN_MAPS = {

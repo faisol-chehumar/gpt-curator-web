@@ -11,6 +11,7 @@ import {
 
 const Section: React.FC<SectionProps> = ({
   children,
+  testId,
   bgColor = 'transparent',
   paddingY = 'none',
 }) => {
@@ -20,7 +21,11 @@ const Section: React.FC<SectionProps> = ({
     PADDING_Y_MAPS[paddingY]
   );
 
-  return <section className={classes}>{children}</section>;
+  return (
+    <section data-testid={testId} className={classes}>
+      {children}
+    </section>
+  );
 };
 
 export default Section;
