@@ -1,13 +1,13 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseTypography } from '@/shared/components/Typography/types';
+import { BaseTypographyProps } from '@/shared/components/Typography/types';
 import {
   TEXT_COLOR_MAPS,
   TEXT_MARGIN_BOTTOMS,
 } from '@/shared/components/Typography/classMappings';
 
-const HeroHeadline: React.FC<BaseTypography> = ({
+const HeroHeadline: React.FC<BaseTypographyProps> = ({
   children,
   color = 'dark',
   mb = 'medium',

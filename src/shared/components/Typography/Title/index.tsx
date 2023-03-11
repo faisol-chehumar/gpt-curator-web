@@ -1,13 +1,22 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseTypography } from '@/shared/components/Typography/types';
+import { TitleProps } from '@/shared/components/Typography/types';
 import { TEXT_COLOR_MAPS } from '@/shared/components/Typography/classMappings';
 
-const Title = ({ children, color = 'black' }: BaseTypography) => {
-  const classes = classNames('text-2xl', TEXT_COLOR_MAPS[color]);
+const Title = ({ children, color = 'black', variant = 'h2' }: TitleProps) => {
+  const classes = classNames('text-2xl mb-md', TEXT_COLOR_MAPS[color]);
 
-  return <h1 className={classes}>{children}</h1>;
+  const variantsMapping = {
+    h1: <h1 className={classes}>{children}</h1>,
+    h2: <h2 className={classes}>{children}</h2>,
+    h3: <h3 className={classes}>{children}</h3>,
+    h4: <h4 className={classes}>{children}</h4>,
+    h5: <h5 className={classes}>{children}</h5>,
+    h6: <h6 className={classes}>{children}</h6>,
+  };
+
+  return variantsMapping[variant];
 };
 
 export default Title;

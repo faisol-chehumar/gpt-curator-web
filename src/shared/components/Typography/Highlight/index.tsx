@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { BaseTypography } from '@/shared/components/Typography/types';
+import { BaseTypographyProps } from '@/shared/components/Typography/types';
 import { TEXT_COLOR_MAPS } from '@/shared/components/Typography/classMappings';
 
-const Highlight: React.FC<BaseTypography> = ({
+const Highlight: React.FC<BaseTypographyProps> = ({
   children,
   color = 'inherit',
 }) => {

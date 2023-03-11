@@ -4,6 +4,7 @@ export const TEXT_COLOR_MAPS = {
   secondary: 'text-secondary',
   dark: 'text-dark',
   'lighter-dark': 'text-lighter-dark',
+  'darker-dark': 'text-darker-dark',
   white: 'text-white',
   black: 'text-black',
 };
