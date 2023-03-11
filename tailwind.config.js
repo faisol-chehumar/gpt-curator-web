@@ -15,8 +15,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dark: colors.charcoal_gray,
         'lighter-dark': colors.slate_gray,
+        dark: colors.charcoal_gray,
+        'darker-dark': colors.deep_night,
         primary: {
           light: colors.primary_lighter,
           DEFAULT: colors.primary,

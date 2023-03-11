@@ -6,6 +6,7 @@
   "success": "#28a745",
   "warning": "#ffc107",
   "error": "#dc3545",
+  "slate_gray": "#72767d",
   "charcoal_gray": "#212228",
-  "slate_gray": "#72767d"
+  "deep_night": "#1A1A1E"
 }
