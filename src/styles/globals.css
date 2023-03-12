@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* the slides */
+.slick-slider {
+  overflow: hidden;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -9px;
+}
+
+/* item */
+.carousel__item {
+  padding: 0 9px;
+}

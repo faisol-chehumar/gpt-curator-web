@@ -6,19 +6,31 @@ import {
   WIDTH_MAPS,
   HEIGHT_MAPS,
   ALIGN_MAPS,
+  LEADING_MAPS,
+  POSITION_MAPS,
+  MARGIN_MAPS,
 } from '@/shared/components/Layouts/classMappings';
-import { BoxProps } from '@/shared/components/Layouts/types';
-import { Colors } from '@/shared/types/commons';
+import { BoxProps, Widths } from '@/shared/components/Layouts/types';
+import { Colors, Positions, Spaces } from '@/shared/types/commons';
 
 const Box: React.FC<BoxProps> = ({
+  className,
   children,
   bgColor = Colors.TRANSPARENT,
-  width = { mobile: 'full', tablet: 'full', desktop: 'full' },
+  width = { mobile: Widths.AUTO, tablet: Widths.AUTO, desktop: Widths.AUTO },
   height = { mobile: 'fit', tablet: 'fit', desktop: 'fit' },
   align = { mobile: 'center', tablet: 'left', desktop: 'left' },
+  leading = Spaces.BASE,
+  position = Positions.BASE,
+  margin = {
+    top: undefined,
+    right: undefined,
+    bottom: undefined,
+    left: undefined,
+  },
 }) => {
   const classes = classNames(
-    'relative',
+    POSITION_MAPS[position],
     BG_COLOR_MAPS[bgColor],
     WIDTH_MAPS.mobile[width.mobile],
     WIDTH_MAPS.tablet[width.tablet],
@@ -28,7 +40,13 @@ const Box: React.FC<BoxProps> = ({
     HEIGHT_MAPS.desktop[height.desktop],
     ALIGN_MAPS.mobile[align.mobile],
     ALIGN_MAPS.tablet[align.tablet],
-    ALIGN_MAPS.desktop[align.desktop]
+    ALIGN_MAPS.desktop[align.desktop],
+    LEADING_MAPS[leading],
+    MARGIN_MAPS.top[margin.top || Spaces.NONE],
+    MARGIN_MAPS.right[margin.right || Spaces.NONE],
+    MARGIN_MAPS.bottom[margin.bottom || Spaces.NONE],
+    MARGIN_MAPS.left[margin.left || Spaces.NONE],
+    className
   );
 
   return <div className={classes}>{children}</div>;

@@ -1,10 +1,10 @@
 import { Sizes, Colors } from '@/shared/types/commons';
 
 export const SVG_SIZES = {
-  [Sizes.SMALL]: 'text-base',
-  [Sizes.BASE]: 'text-md',
-  [Sizes.MEDIUM]: 'text-lg',
-  [Sizes.LARGE]: 'text-2xl',
+  [Sizes.SMALL]: 'text-base leading-none',
+  [Sizes.BASE]: 'text-md leading-none',
+  [Sizes.MEDIUM]: 'text-lg leading-none',
+  [Sizes.LARGE]: 'text-2xl leading-none',
 };
 
 export const SVG_FILL_COLORS = {

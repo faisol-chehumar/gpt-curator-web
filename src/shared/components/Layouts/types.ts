@@ -1,7 +1,19 @@
-import { Spaces } from './../../types/commons';
-import { Colors, Devices, BaseProps, Sizes } from '@/shared/types/commons';
+import {
+  Colors,
+  Devices,
+  BaseProps,
+  Spaces,
+  Positions,
+  NegativeSpaces,
+} from '@/shared/types/commons';
 
-export type Widths = 'full' | 'fullScreen' | '5/12' | '7/12';
+export enum Widths {
+  AUTO = 'auto',
+  FULL = 'full',
+  FULL_SCREEN = 'fullScreen',
+  FIVE_TWELVE = '5/12',
+  SEVEN_TWELVE = '7/12',
+}
 export type LayoutWidths = {
   [key in Devices]: Widths;
 };
@@ -21,8 +33,23 @@ export type aligns = 'left' | 'center' | 'right';
 export type LayoutAligns = {
   [key in Devices]: aligns;
 };
+
+export enum Directions {
+  TOP = 'top',
+  RIGHT = 'right',
+  BOTTOM = 'bottom',
+  LEFT = 'left',
+}
+
+export type LayoutMargins = {
+  [key in Directions]?: Spaces | NegativeSpaces;
+};
 export interface BoxProps extends BaseLayoutProps {
+  className?: string;
   align?: LayoutAligns;
+  leading?: Spaces;
+  position?: Positions;
+  margin?: LayoutMargins;
 }
 
 type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
