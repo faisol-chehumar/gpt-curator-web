@@ -6,6 +6,14 @@ const nextConfig = {
       { loader: 'next/font/google', options: { subsets: ['latin'] } },
     ],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'placekitten.com',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;
