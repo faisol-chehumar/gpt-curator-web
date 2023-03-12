@@ -9,10 +9,11 @@ import {
   ITEM_ALIGN_MAPS,
 } from '@/shared/components/Layouts/classMappings';
 import { FlexProps } from '@/shared/components/Layouts/types';
+import { Colors } from '@/shared/types/commons';
 
 const Flex: React.FC<FlexProps> = ({
   children,
-  bgColor = 'transparent',
+  bgColor = Colors.TRANSPARENT,
   width = { mobile: 'full', tablet: 'full', desktop: 'full' },
   height = { mobile: 'fit', tablet: 'fit', desktop: 'fit' },
   direction = { mobile: 'col-reverse', tablet: 'row', desktop: 'row' },

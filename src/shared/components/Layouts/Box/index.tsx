@@ -8,10 +8,11 @@ import {
   ALIGN_MAPS,
 } from '@/shared/components/Layouts/classMappings';
 import { BoxProps } from '@/shared/components/Layouts/types';
+import { Colors } from '@/shared/types/commons';
 
 const Box: React.FC<BoxProps> = ({
   children,
-  bgColor = 'transparent',
+  bgColor = Colors.TRANSPARENT,
   width = { mobile: 'full', tablet: 'full', desktop: 'full' },
   height = { mobile: 'fit', tablet: 'fit', desktop: 'fit' },
   align = { mobile: 'center', tablet: 'left', desktop: 'left' },

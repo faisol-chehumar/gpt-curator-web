@@ -6,12 +6,13 @@ import {
   BG_COLOR_MAPS,
   PADDING_Y_MAPS,
 } from '@/shared/components/Layouts/classMappings';
+import { Colors, Spaces } from '@/shared/types/commons';
 
 const Section: React.FC<SectionProps> = ({
   children,
   testId,
-  bgColor = 'transparent',
-  paddingY = 'none',
+  bgColor = Colors.TRANSPARENT,
+  paddingY = Spaces.NONE,
 }) => {
   const classes = classNames(
     'min-w-full',
