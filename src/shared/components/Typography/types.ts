@@ -1,7 +1,7 @@
-import { BaseProps, Colors, Sizes } from '@/shared/types/commons';
+import { BaseProps, Colors, Spaces } from '@/shared/types/commons';
 
 type TypographyColors = Exclude<Colors, 'transparent'> | 'inherit';
-type TypographyMargins = Sizes | 'none';
+type TypographyMargins = Spaces;
 
 export interface BaseTypographyProps extends BaseProps {
   color?: TypographyColors;

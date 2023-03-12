@@ -6,11 +6,12 @@ import {
   TEXT_COLOR_MAPS,
   TEXT_MARGIN_BOTTOMS,
 } from '@/shared/components/Typography/classMappings';
+import { Colors, Spaces } from '@/shared/types/commons';
 
 const HeroHeadline: React.FC<BaseTypographyProps> = ({
   children,
-  color = 'dark',
-  mb = 'medium',
+  color = Colors.DARK,
+  mb = Spaces.NONE,
 }) => {
   const classes = classNames(
     'text-4xl md:text-5xl lg:text-hero-headline mb-md',
