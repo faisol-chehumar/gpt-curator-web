@@ -18,6 +18,12 @@ export enum Spaces {
   MEDIUM = 'medium',
   LARGE = 'large',
 }
+export enum NegativeSpaces {
+  SMALL = 'SMALL',
+  BASE = 'BASE',
+  MEDIUM = 'MEDIUM',
+  LARGE = 'LARGE',
+}
 export enum Devices {
   MOBILE = 'mobile',
   TABLET = 'tablet',
@@ -32,4 +38,14 @@ export enum Colors {
   LIGHTER_DARK = 'lighter-dark',
   WHITE = 'white',
   BLACK = 'black',
+}
+
+export enum Positions {
+  TOP_RIGHT = 'top-right',
+  BASE = 'base',
+  // ABSOLUTE = 'absolute',
+  // STATIC = 'static',
+  // RELATIVE = 'relative',
+  // FIXED = 'fixed',
+  // STICKY = 'sticky',
 }
