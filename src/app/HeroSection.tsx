@@ -6,13 +6,18 @@ import { Layouts, Typography } from '@/shared/components';
 import Button from '@/shared/components/Button';
 
 import heroImage from '../../public/hero-image.svg';
+import { Colors, Spaces } from '@/shared/types/commons';
 
 const { Container, Section, Box, Flex } = Layouts;
 const { HeroHeadline, HeroTagline, Highlight } = Typography;
 
 const HeroSection = () => {
   return (
-    <Section testId="hero-section" bgColor="dark" paddingY="large">
+    <Section
+      testId="hero-section"
+      bgColor={Colors.DARK}
+      paddingY={Spaces.LARGE}
+    >
       <Container>
         <Flex
           width={{
@@ -25,11 +30,11 @@ const HeroSection = () => {
           alignItems="center"
         >
           <Box width={{ mobile: 'full', tablet: 'full', desktop: '5/12' }}>
-            <HeroHeadline color="white">
-              <Highlight color="primary">Unlock</Highlight> your creativity with
-              PromptCraft.
+            <HeroHeadline color={Colors.WHITE}>
+              <Highlight color={Colors.PRIMARY}>Unlock</Highlight> your
+              creativity with PromptCraft.
             </HeroHeadline>
-            <HeroTagline color="lighter-dark">
+            <HeroTagline color={Colors.LIGHTER_DARK}>
               Unleash your imagination with our curated prompts
             </HeroTagline>
             <Button>Explore</Button>
@@ -42,10 +47,10 @@ const HeroSection = () => {
               src={heroImage}
               alt="group of creative people illustration"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-              priority
               style={{
                 objectFit: 'contain',
               }}
+              priority
               fill
             />
           </Box>
