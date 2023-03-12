@@ -1,3 +1,4 @@
+import { Colors, Sizes } from '@/shared/types/commons';
 import classNames from 'classnames';
 
 import {
@@ -12,9 +13,9 @@ const Button: React.FC<BaseButtonProps> = ({
   children,
   onClick,
   variant = 'regular',
-  color = 'primary',
-  size = 'base',
-  radius = 'base',
+  color = Colors.PRIMARY,
+  size = Sizes.BASE,
+  radius = Sizes.BASE,
 }) => {
   const classes = classNames(
     'inline-block text-white',
