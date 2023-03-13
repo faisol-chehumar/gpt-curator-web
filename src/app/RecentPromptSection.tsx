@@ -3,11 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 
+import { Colors, Spaces } from '@/shared/types/commons';
 import Container from '@/shared/components/Layouts/Container';
 import Section from '@/shared/components/Layouts/Section';
 import Title from '@/shared/components/Typography/Title';
 import Carousel from '@/shared/components/Carousel';
-import { Colors, Spaces } from '@/shared/types/commons';
 
 const RecentPromptSection = () => {
   return (

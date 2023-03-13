@@ -8,11 +8,11 @@ import {
 } from '@/shared/types/commons';
 
 export enum Widths {
-  AUTO = 'auto',
-  FULL = 'full',
-  FULL_SCREEN = 'fullScreen',
-  FIVE_TWELVE = '5/12',
-  SEVEN_TWELVE = '7/12',
+  AUTO = 'AUTO',
+  FULL = 'FULL',
+  FULL_SCREEN = 'FULL_SCREEN',
+  FIVE_TWELVE = 'FIVE_TWELVE',
+  SEVEN_TWELVE = 'SEVEN_TWELVE',
 }
 export type LayoutWidths = {
   [key in Devices]: Widths;

@@ -2,11 +2,12 @@
 
 import Image from 'next/image';
 
-import { Layouts, Typography } from '@/shared/components';
-import Button from '@/shared/components/Button';
+import { Layouts, Typography, Button } from '@/shared/components';
+
+import { Colors, Spaces } from '@/shared/types/commons';
+import { Widths } from '@/shared/components/Layouts/types';
 
 import heroImage from '../../public/hero-image.svg';
-import { Colors, Spaces } from '@/shared/types/commons';
 
 const { Container, Section, Box, Flex } = Layouts;
 const { HeroHeadline, HeroTagline, Highlight } = Typography;
@@ -21,15 +22,21 @@ const HeroSection = () => {
       <Container>
         <Flex
           width={{
-            mobile: 'full',
-            tablet: 'full',
-            desktop: 'full',
+            mobile: Widths.FULL,
+            tablet: Widths.FULL,
+            desktop: Widths.FULL,
           }}
           height={{ mobile: 'fit', tablet: 'fit', desktop: '40rem' }}
           direction={{ mobile: 'col-reverse', tablet: 'row', desktop: 'row' }}
           alignItems="center"
         >
-          <Box width={{ mobile: 'full', tablet: 'full', desktop: '5/12' }}>
+          <Box
+            width={{
+              mobile: Widths.FULL,
+              tablet: Widths.FULL,
+              desktop: Widths.FIVE_TWELVE,
+            }}
+          >
             <HeroHeadline color={Colors.WHITE}>
               <Highlight color={Colors.PRIMARY}>Unlock</Highlight> your
               creativity with PromptCraft.
@@ -40,7 +47,11 @@ const HeroSection = () => {
             <Button>Explore</Button>
           </Box>
           <Box
-            width={{ mobile: 'full', tablet: 'full', desktop: '7/12' }}
+            width={{
+              mobile: Widths.FULL,
+              tablet: Widths.FULL,
+              desktop: Widths.SEVEN_TWELVE,
+            }}
             height={{ mobile: '16rem', tablet: '40rem', desktop: 'full' }}
           >
             <Image
