@@ -13,6 +13,6 @@ export const SVG_FILL_COLORS = {
   [Colors.DARKER_DARK]: 'fill-darker-dark',
   [Colors.DARK]: 'fill-dark',
   [Colors.LIGHTER_DARK]: 'fill-lighter-dark',
-  [Colors.WHITE]: 'fill-white',
+  [Colors.WHITE]: 'fill-white opacity-50 group-hover:opacity-100	',
   [Colors.BLACK]: 'fill-black',
 };

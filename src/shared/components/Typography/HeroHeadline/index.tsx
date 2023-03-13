@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import { poppins } from '@/shared/fonts';
 import { BaseTypographyProps } from '@/shared/components/Typography/types';
 import {
   TEXT_COLOR_MAPS,
@@ -14,6 +15,7 @@ const HeroHeadline: React.FC<BaseTypographyProps> = ({
   mb = Spaces.NONE,
 }) => {
   const classes = classNames(
+    poppins.className,
     'text-4xl md:text-5xl lg:text-hero-headline mb-md',
     TEXT_COLOR_MAPS[color],
     TEXT_MARGIN_BOTTOMS[mb]

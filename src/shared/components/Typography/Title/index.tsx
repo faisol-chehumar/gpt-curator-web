@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import { poppins } from '@/shared/fonts';
 import { TitleProps } from '@/shared/components/Typography/types';
 import { TEXT_COLOR_MAPS } from '@/shared/components/Typography/classMappings';
 import { Colors } from '@/shared/types/commons';
@@ -10,7 +11,11 @@ const Title = ({
   color = Colors.BLACK,
   variant = 'h2',
 }: TitleProps) => {
-  const classes = classNames('text-2xl mb-md', TEXT_COLOR_MAPS[color]);
+  const classes = classNames(
+    'text-2xl mb-md',
+    poppins.className,
+    TEXT_COLOR_MAPS[color]
+  );
 
   const variantsMapping = {
     h1: <h1 className={classes}>{children}</h1>,

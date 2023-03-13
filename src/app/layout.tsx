@@ -1,5 +1,5 @@
 import AppInfo from '@/shared/static-texts/app-info.json';
-import { poppins } from '@/shared/fonts';
+import { openSans } from '@/shared/fonts';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} min-h-screen`}>{children}</body>
+      <body className={`${openSans.className} min-h-screen`}>{children}</body>
     </html>
   );
 }

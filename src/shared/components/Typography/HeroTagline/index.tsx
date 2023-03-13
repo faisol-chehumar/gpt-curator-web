@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { openSans } from '@/shared/fonts';
-
 import { BaseTypographyProps } from '@/shared/components/Typography/types';
 import { TEXT_COLOR_MAPS, TEXT_MARGIN_BOTTOMS } from '../classMappings';
 import { Colors, Spaces } from '@/shared/types/commons';
