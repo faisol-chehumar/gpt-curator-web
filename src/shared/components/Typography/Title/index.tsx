@@ -12,7 +12,7 @@ const Title = ({
   variant = 'h2',
 }: TitleProps) => {
   const classes = classNames(
-    'text-2xl mb-md',
+    'text-xl mb-md',
     poppins.className,
     TEXT_COLOR_MAPS[color]
   );
