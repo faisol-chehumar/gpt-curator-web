@@ -5,6 +5,7 @@ import {
   Spaces,
   Positions,
   NegativeSpaces,
+  Sizes,
 } from '@/shared/types/commons';
 
 export enum Widths {
@@ -17,7 +18,7 @@ export enum Widths {
 export type LayoutWidths = {
   [key in Devices]: Widths;
 };
-export type Heights = 'fit' | 'full' | '40rem' | '16rem';
+export type Heights = 'auto' | 'fit' | 'full' | '40rem' | '16rem';
 export type LayoutHeights = {
   [key in Devices]: Heights;
 };
@@ -44,12 +45,17 @@ export enum Directions {
 export type LayoutMargins = {
   [key in Directions]?: Spaces | NegativeSpaces;
 };
+
+type LayoutRadius = Sizes;
+
 export interface BoxProps extends BaseLayoutProps {
   className?: string;
   align?: LayoutAligns;
   leading?: Spaces;
   position?: Positions;
   margin?: LayoutMargins;
+  radius?: LayoutRadius;
+  overflow?: Overflows;
 }
 
 type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
@@ -64,4 +70,10 @@ export interface FlexProps extends BaseLayoutProps {
 export interface SectionProps extends BaseProps {
   bgColor?: Colors;
   paddingY?: Spaces;
+}
+
+export enum Overflows {
+  HIDDEN = 'HIDDEN',
+  AUTO = 'AUTO',
+  VISIBLE = 'VISIBLE',
 }

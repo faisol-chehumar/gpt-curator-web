@@ -9,9 +9,11 @@ import {
   LEADING_MAPS,
   POSITION_MAPS,
   MARGIN_MAPS,
+  BOX_BORDER_RADIUSES,
+  BOX_OVERFLOWS,
 } from '@/shared/components/Layouts/classMappings';
-import { BoxProps, Widths } from '@/shared/components/Layouts/types';
-import { Colors, Positions, Spaces } from '@/shared/types/commons';
+import { BoxProps, Widths, Overflows } from '@/shared/components/Layouts/types';
+import { Colors, Positions, Sizes, Spaces } from '@/shared/types/commons';
 
 const Box: React.FC<BoxProps> = ({
   className,
@@ -28,8 +30,11 @@ const Box: React.FC<BoxProps> = ({
     bottom: undefined,
     left: undefined,
   },
+  radius = Sizes.BASE,
+  overflow = Overflows.VISIBLE,
 }) => {
   const classes = classNames(
+    BOX_OVERFLOWS[overflow],
     POSITION_MAPS[position],
     BG_COLOR_MAPS[bgColor],
     WIDTH_MAPS.mobile[width.mobile],
@@ -46,6 +51,7 @@ const Box: React.FC<BoxProps> = ({
     MARGIN_MAPS.right[margin.right || Spaces.NONE],
     MARGIN_MAPS.bottom[margin.bottom || Spaces.NONE],
     MARGIN_MAPS.left[margin.left || Spaces.NONE],
+    BOX_BORDER_RADIUSES[radius],
     className
   );
 

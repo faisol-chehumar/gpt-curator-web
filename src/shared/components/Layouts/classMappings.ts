@@ -1,5 +1,6 @@
+import { Overflows } from '@/shared/components/Layouts/types';
 import { Positions, NegativeSpaces } from './../../types/commons';
-import { Spaces } from '@/shared/types/commons';
+import { Spaces, Sizes } from '@/shared/types/commons';
 import { Directions, Widths } from './types';
 
 export const BG_COLOR_MAPS = {
@@ -39,18 +40,21 @@ export const WIDTH_MAPS = {
 
 export const HEIGHT_MAPS = {
   mobile: {
+    auto: 'h-auto',
     fit: 'h-fit',
     full: 'h-full',
     '16rem': 'h-[16rem]',
     '40rem': 'h-[40rem]',
   },
   tablet: {
+    auto: 'md:h-auto',
     fit: 'md:h-fit',
     full: 'md:h-full',
     '16rem': 'md:h-[16rem]',
     '40rem': 'md:h-[40rem]',
   },
   desktop: {
+    auto: 'lg:h-auto',
     fit: 'lg:h-fit',
     full: 'lg:h-full',
     '16rem': 'lg:h-[16rem]',
@@ -175,4 +179,18 @@ export const MARGIN_MAPS = {
     [NegativeSpaces.MEDIUM]: '-ml-8',
     [NegativeSpaces.LARGE]: '-ml-10',
   },
+};
+
+export const BOX_BORDER_RADIUSES = {
+  [Sizes.NONE]: 'round-none',
+  [Sizes.SMALL]: 'rounded-sm',
+  [Sizes.BASE]: 'rounded',
+  [Sizes.MEDIUM]: 'rounded-md',
+  [Sizes.LARGE]: 'rounded-xl',
+};
+
+export const BOX_OVERFLOWS = {
+  [Overflows.AUTO]: 'overflow-auto',
+  [Overflows.HIDDEN]: 'overflow-hidden',
+  [Overflows.VISIBLE]: 'overflow-visible',
 };
