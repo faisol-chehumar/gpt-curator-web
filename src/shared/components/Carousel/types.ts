@@ -1,7 +1,7 @@
 import { Devices, BaseProps } from '@/shared/types/commons';
+import React from 'react';
 
-type CarouselItem = {
-  id: string;
+export type CarouselItem = {
   [key: string]: any;
 };
 
@@ -10,8 +10,7 @@ type SlidesToShows = {
 };
 
 export interface CarouselProps {
-  items: CarouselItem[];
-  render?: (item: CarouselItem) => any;
+  children: React.ReactNode;
   settings?: {};
   slidesToShows?: SlidesToShows;
 }

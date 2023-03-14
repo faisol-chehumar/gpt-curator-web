@@ -2,25 +2,25 @@
 
 import React, { createRef } from 'react';
 import Slider from 'react-slick';
-import screens from '@/styles/tokens/screens.json';
 
+import screens from '@/styles/tokens/screens.json';
+import { LeftArrowSvg, RightArrowSvg } from '@/shared/components/Svg';
 import {
   Colors,
   NegativeSpaces,
   Positions,
   Spaces,
 } from '@/shared/types/commons';
-import { LeftArrowSvg, RightArrowSvg } from '@/shared/components/Svg';
+
+import { Widths } from '../Layouts/types';
+import Box from '../Layouts/Box';
 
 import { CarouselProps } from './types';
-import Box from '../Layouts/Box';
 import CustomArrow from './CustomArrow';
-import { Widths } from '../Layouts/types';
-import { MARGIN_MAPS } from '../Layouts/classMappings';
+import Item from './Item';
 
-const Carousel: React.FC<CarouselProps> = ({
-  items = [],
-  render = () => {},
+const Carousel: React.FC<CarouselProps> & { Item: typeof Item } = ({
+  children,
   settings = {},
   slidesToShows = { mobile: 1, tablet: 1, desktop: 1 },
 }) => {
@@ -64,11 +64,8 @@ const Carousel: React.FC<CarouselProps> = ({
   return (
     <Box>
       <Slider ref={sliderRef} {...defaultSettings}>
-        {items.map((item) => (
-          <Box key={item.id} className="carousel__item">
-            {render(item)}
-          </Box>
-        ))}
+        {/* {items.map((item) => render(item))} */}
+        {children}
       </Slider>
       <Box
         leading={Spaces.NONE}
@@ -90,5 +87,7 @@ const Carousel: React.FC<CarouselProps> = ({
     </Box>
   );
 };
+
+Carousel.Item = Item;
 
 export default Carousel;
