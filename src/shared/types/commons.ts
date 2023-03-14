@@ -6,10 +6,11 @@ export interface BaseProps {
 }
 
 export enum Sizes {
-  SMALL = 'small',
-  BASE = 'base',
-  MEDIUM = 'medium',
-  LARGE = 'large',
+  NONE = 'NONE',
+  SMALL = 'SMALL',
+  BASE = 'BASE',
+  MEDIUM = 'MEDIUM',
+  LARGE = 'LARGE',
 }
 export enum Spaces {
   NONE = 'none',
