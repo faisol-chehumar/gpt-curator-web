@@ -64,7 +64,6 @@ const Carousel: React.FC<CarouselProps> & { Item: typeof Item } = ({
   return (
     <Box>
       <Slider ref={sliderRef} {...defaultSettings}>
-        {/* {items.map((item) => render(item))} */}
         {children}
       </Slider>
       <Box
