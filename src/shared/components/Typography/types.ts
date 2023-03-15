@@ -1,4 +1,4 @@
-import { BaseProps, Colors, Spaces } from '@/shared/types/commons';
+import { BaseProps, Colors, Spaces, Sizes } from '@/shared/types/commons';
 
 type TypographyColors = Exclude<Colors, 'transparent'> | 'inherit';
 type TypographyMargins = Spaces;
@@ -12,4 +12,8 @@ type TitleVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export interface TitleProps extends BaseTypographyProps {
   variant?: TitleVariants;
+}
+
+export interface TextProps extends BaseTypographyProps {
+  size?: Exclude<Sizes, Sizes.NONE>;
 }

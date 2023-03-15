@@ -3,6 +3,7 @@ import SubTitle from './SubTitle';
 import HeroHeadline from './HeroHeadline';
 import HeroTagline from './HeroTagline';
 import Highlight from './Highlight';
+import Text from './Text';
 
 const typography = {
   Title,
@@ -10,6 +11,7 @@ const typography = {
   HeroHeadline,
   HeroTagline,
   Highlight,
+  Text,
 };
 
 export default typography;
