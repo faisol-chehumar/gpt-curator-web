@@ -1,18 +1,21 @@
 import React from 'react';
-import Image from 'next/image';
 
-import { BaseProps, Sizes, Spaces } from '@/shared/types/commons';
+import { BaseProps, Colors, Sizes, Spaces } from '@/shared/types/commons';
 
 import Box from '../Layouts/Box';
-import { Overflows } from '../Layouts/types';
+import { Overflows, Widths } from '../Layouts/types';
 
 const Item: React.FC<BaseProps> = ({ children }) => {
   return (
     <Box
-      height={{ mobile: 'auto', tablet: 'auto', desktop: 'auto' }}
-      radius={Sizes.LARGE}
+      width={{ mobile: Widths.AUTO, tablet: Widths.AUTO, desktop: Widths.AUTO }}
       overflow={Overflows.HIDDEN}
       margin={{ left: Spaces.SMALL, right: Spaces.SMALL }}
+      border={{
+        size: Sizes.BASE,
+        color: Colors.LIGHTER_DARK,
+        radius: Sizes.LARGE,
+      }}
     >
       {children}
     </Box>
