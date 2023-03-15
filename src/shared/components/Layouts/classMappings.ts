@@ -1,7 +1,7 @@
-import { Overflows } from '@/shared/components/Layouts/types';
+import { Heights, Overflows } from '@/shared/components/Layouts/types';
 import { Positions, NegativeSpaces } from './../../types/commons';
-import { Spaces, Sizes } from '@/shared/types/commons';
-import { Directions, Widths } from './types';
+import { Spaces, Sizes, Colors } from '@/shared/types/commons';
+import { Directions, Widths, Aligns } from './types';
 
 export const BG_COLOR_MAPS = {
   transparent: 'bg-transparent',
@@ -40,25 +40,25 @@ export const WIDTH_MAPS = {
 
 export const HEIGHT_MAPS = {
   mobile: {
-    auto: 'h-auto',
-    fit: 'h-fit',
-    full: 'h-full',
-    '16rem': 'h-[16rem]',
-    '40rem': 'h-[40rem]',
+    [Heights.AUTO]: 'h-auto',
+    [Heights.FIT]: 'h-fit',
+    [Heights.FULL]: 'h-full',
+    [Heights.SIXTEEN_REM]: 'h-[16rem]',
+    [Heights.FORTY_REM]: 'h-[40rem]',
   },
   tablet: {
-    auto: 'md:h-auto',
-    fit: 'md:h-fit',
-    full: 'md:h-full',
-    '16rem': 'md:h-[16rem]',
-    '40rem': 'md:h-[40rem]',
+    [Heights.AUTO]: 'md:h-auto',
+    [Heights.FIT]: 'md:h-fit',
+    [Heights.FULL]: 'md:h-full',
+    [Heights.SIXTEEN_REM]: 'md:h-[16rem]',
+    [Heights.FORTY_REM]: 'md:h-[40rem]',
   },
   desktop: {
-    auto: 'lg:h-auto',
-    fit: 'lg:h-fit',
-    full: 'lg:h-full',
-    '16rem': 'lg:h-[16rem]',
-    '40rem': 'lg:h-[40rem]',
+    [Heights.AUTO]: 'lg:h-auto',
+    [Heights.FIT]: 'lg:h-fit',
+    [Heights.FULL]: 'lg:h-full',
+    [Heights.SIXTEEN_REM]: 'lg:h-[16rem]',
+    [Heights.FORTY_REM]: 'lg:h-[40rem]',
   },
 };
 
@@ -89,9 +89,9 @@ export const DIRECTION_MAPS = {
 
 export const ITEM_ALIGN_MAPS = {
   start: 'items-start',
-  end: 'items-end	',
-  center: 'items-center	',
-  baseline: 'items-baseline	',
+  end: 'items-end',
+  center: 'items-center',
+  baseline: 'items-baseline',
   stretch: 'items-stretch',
 };
 
@@ -105,19 +105,19 @@ export const PADDING_Y_MAPS = {
 
 export const ALIGN_MAPS = {
   mobile: {
-    left: 'text-left',
-    center: 'text-center',
-    right: 'text-right',
+    [Aligns.LEFT]: 'text-left',
+    [Aligns.CENTER]: 'text-center',
+    [Aligns.RIGHT]: 'text-right',
   },
   tablet: {
-    left: 'md:text-left',
-    center: 'md:text-center',
-    right: 'md:text-right',
+    [Aligns.LEFT]: 'md:text-left',
+    [Aligns.CENTER]: 'md:text-center',
+    [Aligns.RIGHT]: 'md:text-right',
   },
   desktop: {
-    left: 'lg:text-left',
-    center: 'lg:text-center',
-    right: 'lg:text-right',
+    [Aligns.LEFT]: 'lg:text-left',
+    [Aligns.CENTER]: 'lg:text-center',
+    [Aligns.RIGHT]: 'lg:text-right',
   },
 };
 
@@ -181,6 +181,53 @@ export const MARGIN_MAPS = {
   },
 };
 
+export const PADDING_MAPS = {
+  [Directions.TOP]: {
+    [Spaces.NONE]: 'pt-0',
+    [Spaces.SMALL]: 'pt-2',
+    [Spaces.BASE]: 'pt-4',
+    [Spaces.MEDIUM]: 'pt-8',
+    [Spaces.LARGE]: 'pt-10',
+    [NegativeSpaces.SMALL]: '-pt-2',
+    [NegativeSpaces.BASE]: '-pt-4',
+    [NegativeSpaces.MEDIUM]: '-pt-8',
+    [NegativeSpaces.LARGE]: '-pt-10',
+  },
+  [Directions.RIGHT]: {
+    [Spaces.NONE]: 'pr-0',
+    [Spaces.SMALL]: 'pr-2',
+    [Spaces.BASE]: 'pr-4',
+    [Spaces.MEDIUM]: 'pr-8',
+    [Spaces.LARGE]: 'pr-10',
+    [NegativeSpaces.SMALL]: '-pr-2',
+    [NegativeSpaces.BASE]: '-pr-4',
+    [NegativeSpaces.MEDIUM]: '-pr-8',
+    [NegativeSpaces.LARGE]: '-pr-10',
+  },
+  [Directions.BOTTOM]: {
+    [Spaces.NONE]: 'pb-0',
+    [Spaces.SMALL]: 'pb-2',
+    [Spaces.BASE]: 'pb-4',
+    [Spaces.MEDIUM]: 'pb-8',
+    [Spaces.LARGE]: 'pb-10',
+    [NegativeSpaces.SMALL]: '-pb-2',
+    [NegativeSpaces.BASE]: '-pb-4',
+    [NegativeSpaces.MEDIUM]: '-pb-8',
+    [NegativeSpaces.LARGE]: '-pb-10',
+  },
+  [Directions.LEFT]: {
+    [Spaces.NONE]: 'pl-0',
+    [Spaces.SMALL]: 'pl-2',
+    [Spaces.BASE]: 'pl-4',
+    [Spaces.MEDIUM]: 'pl-8',
+    [Spaces.LARGE]: 'pl-10',
+    [NegativeSpaces.SMALL]: '-pl-2',
+    [NegativeSpaces.BASE]: '-pl-4',
+    [NegativeSpaces.MEDIUM]: '-pl-8',
+    [NegativeSpaces.LARGE]: '-pl-10',
+  },
+};
+
 export const BOX_BORDER_RADIUSES = {
   [Sizes.NONE]: 'round-none',
   [Sizes.SMALL]: 'rounded-sm',
@@ -193,4 +240,23 @@ export const BOX_OVERFLOWS = {
   [Overflows.AUTO]: 'overflow-auto',
   [Overflows.HIDDEN]: 'overflow-hidden',
   [Overflows.VISIBLE]: 'overflow-visible',
+};
+
+export const BOX_BORDERS = {
+  [Sizes.NONE]: 'border-0',
+  [Sizes.SMALL]: 'border-[0.5px]',
+  [Sizes.BASE]: 'border',
+  [Sizes.MEDIUM]: 'border-2',
+  [Sizes.LARGE]: 'border-4',
+};
+
+export const BOX_COLORS = {
+  [Colors.WHITE]: 'border-white',
+  [Colors.BLACK]: 'border-black',
+  [Colors.DARK]: 'border-dark',
+  [Colors.DARKER_DARK]: 'border-darker-dark',
+  [Colors.LIGHTER_DARK]: 'border-lighter-dark',
+  [Colors.PRIMARY]: 'border-primary',
+  [Colors.SECONDARY]: 'border-secondary',
+  [Colors.TRANSPARENT]: 'border-transparent',
 };

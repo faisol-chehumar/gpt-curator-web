@@ -16,11 +16,18 @@ export enum Widths {
   SEVEN_TWELVE = 'SEVEN_TWELVE',
 }
 export type LayoutWidths = {
-  [key in Devices]: Widths;
+  [key in Devices]?: Widths;
 };
-export type Heights = 'auto' | 'fit' | 'full' | '40rem' | '16rem';
+export enum Heights {
+  AUTO = 'AUTO',
+  FIT = 'FIT',
+  FULL = 'FULL',
+  FORTY_REM = '40rem',
+  SIXTEEN_REM = '16rem',
+}
+
 export type LayoutHeights = {
-  [key in Devices]: Heights;
+  [key in Devices]?: Heights;
 };
 
 export interface BaseLayoutProps extends BaseProps {
@@ -30,9 +37,13 @@ export interface BaseLayoutProps extends BaseProps {
 }
 export interface ContainerProps extends BaseProps {}
 
-export type aligns = 'left' | 'center' | 'right';
+export enum Aligns {
+  LEFT = 'left',
+  CENTER = 'center',
+  RIGHT = 'right',
+}
 export type LayoutAligns = {
-  [key in Devices]: aligns;
+  [key in Devices]?: Aligns;
 };
 
 export enum Directions {
@@ -46,16 +57,24 @@ export type LayoutMargins = {
   [key in Directions]?: Spaces | NegativeSpaces;
 };
 
-type LayoutRadius = Sizes;
+export type LayoutPaddings = {
+  [key in Directions]?: Spaces | NegativeSpaces;
+};
 
+type LayoutBorders = {
+  size: Sizes;
+  color: Colors;
+  radius: Sizes;
+};
 export interface BoxProps extends BaseLayoutProps {
   className?: string;
   align?: LayoutAligns;
   leading?: Spaces;
   position?: Positions;
   margin?: LayoutMargins;
-  radius?: LayoutRadius;
+  padding?: LayoutPaddings;
   overflow?: Overflows;
+  border?: LayoutBorders;
 }
 
 type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
