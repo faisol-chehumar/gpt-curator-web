@@ -1,13 +1,13 @@
 import HeroSection from './HeroSection';
-import RecentPromptSection from './RecentPromptSection';
+import RecentAdded from './RecentAdded';
 import Trending from './Trending';
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <RecentPromptSection />
-      {/* <Trending /> */}
+      <RecentAdded />
+      <Trending />
     </>
   );
 }
