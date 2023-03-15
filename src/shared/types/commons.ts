@@ -12,6 +12,7 @@ export enum Sizes {
   MEDIUM = 'MEDIUM',
   LARGE = 'LARGE',
 }
+
 export enum Spaces {
   NONE = 'none',
   SMALL = 'small',
@@ -19,17 +20,20 @@ export enum Spaces {
   MEDIUM = 'medium',
   LARGE = 'large',
 }
+
 export enum NegativeSpaces {
   SMALL = 'SMALL',
   BASE = 'BASE',
   MEDIUM = 'MEDIUM',
   LARGE = 'LARGE',
 }
+
 export enum Devices {
   MOBILE = 'mobile',
   TABLET = 'tablet',
   DESKTOP = 'desktop',
 }
+
 export enum Colors {
   TRANSPARENT = 'transparent',
   PRIMARY = 'primary',
