@@ -9,8 +9,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'placekitten.com',
+        protocol: 'https',
+        hostname: 'cdn.midjourney.com',
       },
     ],
   },
