@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 import { Layouts, Typography, Button } from '@/shared/components';
 
-import { Colors, Spaces } from '@/shared/types/commons';
-import { Widths } from '@/shared/components/Layouts/types';
+import { Colors, Sizes, Spaces } from '@/shared/types/commons';
+import { Aligns, Heights, Widths } from '@/shared/components/Layouts/types';
 
 import heroImage from '../../public/hero-image.svg';
 
@@ -26,14 +26,16 @@ const HeroSection = () => {
             tablet: Widths.FULL,
             desktop: Widths.FULL,
           }}
-          height={{ mobile: 'fit', tablet: 'fit', desktop: '40rem' }}
+          height={{
+            mobile: Heights.FIT,
+            tablet: Heights.FIT,
+            desktop: Heights.FORTY_REM,
+          }}
           direction={{ mobile: 'col-reverse', tablet: 'row', desktop: 'row' }}
           alignItems="center"
         >
           <Box
             width={{
-              mobile: Widths.FULL,
-              tablet: Widths.FULL,
               desktop: Widths.FIVE_TWELVE,
             }}
           >
@@ -48,22 +50,33 @@ const HeroSection = () => {
           </Box>
           <Box
             width={{
-              mobile: Widths.FULL,
-              tablet: Widths.FULL,
               desktop: Widths.SEVEN_TWELVE,
             }}
-            height={{ mobile: '16rem', tablet: '40rem', desktop: 'full' }}
+            height={{
+              mobile: Heights.SIXTEEN_REM,
+              tablet: Heights.FORTY_REM,
+              desktop: Heights.FULL,
+            }}
           >
-            <Image
-              src={heroImage}
-              alt="group of creative people illustration"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-              style={{
-                objectFit: 'contain',
+            <Box
+              height={{
+                mobile: Heights.FULL,
+                tablet: Heights.FULL,
+                desktop: Heights.FULL,
               }}
-              priority
-              fill
-            />
+              width={{ desktop: Widths.AUTO }}
+              align={{ desktop: Aligns.CENTER }}
+            >
+              <Image
+                priority
+                fill
+                src={heroImage}
+                alt="group of creative people illustration"
+                style={{
+                  objectFit: 'contain',
+                }}
+              />
+            </Box>
           </Box>
         </Flex>
       </Container>

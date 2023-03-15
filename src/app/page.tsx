@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <HeroSection />
       <RecentPromptSection />
-      <Trending />
+      {/* <Trending /> */}
     </>
   );
 }
