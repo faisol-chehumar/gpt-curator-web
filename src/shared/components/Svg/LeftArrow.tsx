@@ -23,5 +23,5 @@ const LeftArrowSvg: React.FC<SvgProps> = ({
   );
 };
 
-const MemoLeftArrowSvg = React.memo(LeftArrowSvg);
-export default MemoLeftArrowSvg;
+const MemoLeftArrow = React.memo(LeftArrowSvg);
+export default MemoLeftArrow;

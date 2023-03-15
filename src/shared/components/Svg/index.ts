@@ -1,2 +1,9 @@
-export { default as LeftArrowSvg } from './LeftArrowSvg';
-export { default as RightArrowSvg } from './RightArrowSvg';
+import LeftArrow from './LeftArrow';
+import RightArrow from './RightArrow';
+
+const Svg = {
+  LeftArrow,
+  RightArrow,
+};
+
+export default Svg;

@@ -4,7 +4,7 @@ import React, { createRef } from 'react';
 import Slider from 'react-slick';
 
 import screens from '@/styles/tokens/screens.json';
-import { LeftArrowSvg, RightArrowSvg } from '@/shared/components/Svg';
+import Svg from '@/shared/components/Svg';
 import {
   Colors,
   NegativeSpaces,
@@ -77,10 +77,10 @@ const Carousel: React.FC<CarouselProps> & { Item: typeof Item } = ({
         }}
       >
         <CustomArrow onClick={arrowClickHandlers.prev}>
-          <LeftArrowSvg color={Colors.WHITE} />
+          <Svg.LeftArrow color={Colors.WHITE} />
         </CustomArrow>
         <CustomArrow onClick={arrowClickHandlers.next}>
-          <RightArrowSvg color={Colors.WHITE} />
+          <Svg.RightArrow color={Colors.WHITE} />
         </CustomArrow>
       </Box>
     </Box>

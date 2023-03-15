@@ -6,7 +6,7 @@ import { Colors, Sizes } from '@/shared/types/commons';
 import { SvgProps } from './types';
 import { SVG_FILL_COLORS, SVG_SIZES } from './classMappings';
 
-const RightArrowSvg: React.FC<SvgProps> = ({
+const RightArrow: React.FC<SvgProps> = ({
   color = Colors.BLACK,
   size = Sizes.LARGE,
 }) => {
@@ -23,5 +23,5 @@ const RightArrowSvg: React.FC<SvgProps> = ({
   );
 };
 
-const MemoRightArrowSvg = React.memo(RightArrowSvg);
-export default MemoRightArrowSvg;
+const MemoRightArrow = React.memo(RightArrow);
+export default MemoRightArrow;
