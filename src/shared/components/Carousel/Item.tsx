@@ -3,7 +3,7 @@ import React from 'react';
 import { BaseProps, Colors, Sizes, Spaces } from '@/shared/types/commons';
 
 import Box from '../Layouts/Box';
-import { Overflows, Widths } from '../Layouts/types';
+import { BorderVariants, Overflows, Widths } from '../Layouts/types';
 
 const Item: React.FC<BaseProps> = ({ children }) => {
   return (
@@ -12,8 +12,8 @@ const Item: React.FC<BaseProps> = ({ children }) => {
       overflow={Overflows.HIDDEN}
       margin={{ left: Spaces.SMALL, right: Spaces.SMALL }}
       border={{
-        size: Sizes.BASE,
-        color: Colors.LIGHTER_DARK,
+        variant: BorderVariants.BASE_ALL,
+        color: Colors.DARKER_LIGHT,
         radius: Sizes.LARGE,
       }}
     >
