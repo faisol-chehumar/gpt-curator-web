@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import '../styles/globals.css';
 
+import Footer from './Footer';
+
 export const metadata = {
   title: {
     default: `Discover Creative Prompts | ${AppInfo.NAME}`,
@@ -21,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} min-h-screen`}>{children}</body>
+      <body className={`${openSans.className} min-h-screen`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
