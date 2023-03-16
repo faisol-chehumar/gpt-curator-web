@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import { Colors, Positions, Sizes, Spaces } from '@/shared/types/commons';
 import {
   BG_COLOR_MAPS,
   WIDTH_MAPS,
@@ -11,9 +12,9 @@ import {
   MARGIN_MAPS,
   BOX_BORDER_RADIUSES,
   BOX_OVERFLOWS,
-  BOX_BORDERS,
-  BOX_COLORS,
+  BOX_BORDER_COLORS,
   PADDING_MAPS,
+  BOX_BORDER_VARIANTS,
 } from '@/shared/components/Layouts/classMappings';
 import {
   BoxProps,
@@ -21,8 +22,8 @@ import {
   Overflows,
   Heights,
   Aligns,
+  BorderVariants,
 } from '@/shared/components/Layouts/types';
-import { Colors, Positions, Sizes, Spaces } from '@/shared/types/commons';
 
 const Box: React.FC<BoxProps> = ({
   className,
@@ -47,7 +48,7 @@ const Box: React.FC<BoxProps> = ({
   },
   overflow = Overflows.VISIBLE,
   border = {
-    size: undefined,
+    variant: undefined,
     color: undefined,
     radius: undefined,
   },
@@ -75,8 +76,8 @@ const Box: React.FC<BoxProps> = ({
     PADDING_MAPS.bottom[padding.bottom || Spaces.NONE],
     PADDING_MAPS.left[padding.left || Spaces.NONE],
     BOX_BORDER_RADIUSES[border.radius || Sizes.NONE],
-    BOX_BORDERS[border.size || Sizes.NONE],
-    BOX_COLORS[border.color || Colors.TRANSPARENT],
+    BOX_BORDER_COLORS[border.color || Colors.TRANSPARENT],
+    BOX_BORDER_VARIANTS[border.variant || BorderVariants.NONE],
     className
   );
 

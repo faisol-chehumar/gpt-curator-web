@@ -43,6 +43,7 @@ export enum Colors {
   LIGHTER_DARK = 'lighter-dark',
   WHITE = 'white',
   BLACK = 'black',
+  DARKER_LIGHT = 'DARKER_LIGHT',
 }
 
 export enum Positions {

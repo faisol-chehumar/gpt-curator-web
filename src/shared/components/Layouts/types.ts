@@ -61,10 +61,16 @@ export type LayoutPaddings = {
   [key in Directions]?: Spaces | NegativeSpaces;
 };
 
+export enum BorderVariants {
+  NONE = 'NONE',
+  BASE_ALL = 'BASE_ALL',
+  BASE_TOP = 'BASE_TOP',
+}
+
 type LayoutBorders = {
-  size: Sizes;
-  color: Colors;
-  radius: Sizes;
+  variant?: BorderVariants;
+  color?: Colors;
+  radius?: Sizes;
 };
 export interface BoxProps extends BaseLayoutProps {
   className?: string;
@@ -89,6 +95,7 @@ export interface FlexProps extends BaseLayoutProps {
 export interface SectionProps extends BaseProps {
   bgColor?: Colors;
   paddingY?: Spaces;
+  border?: LayoutBorders;
 }
 
 export enum Overflows {

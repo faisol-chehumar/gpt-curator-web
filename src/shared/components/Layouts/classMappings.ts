@@ -1,4 +1,8 @@
-import { Heights, Overflows } from '@/shared/components/Layouts/types';
+import {
+  BorderVariants,
+  Heights,
+  Overflows,
+} from '@/shared/components/Layouts/types';
 import { Positions, NegativeSpaces } from './../../types/commons';
 import { Spaces, Sizes, Colors } from '@/shared/types/commons';
 import { Directions, Widths, Aligns } from './types';
@@ -12,6 +16,7 @@ export const BG_COLOR_MAPS = {
   'darker-dark': 'bg-darker-dark',
   white: 'bg-white',
   black: 'bg-black',
+  [Colors.DARKER_LIGHT]: 'bg-black',
 };
 
 export const WIDTH_MAPS = {
@@ -228,29 +233,19 @@ export const PADDING_MAPS = {
   },
 };
 
-export const BOX_BORDER_RADIUSES = {
-  [Sizes.NONE]: 'round-none',
-  [Sizes.SMALL]: 'rounded-sm',
-  [Sizes.BASE]: 'rounded',
-  [Sizes.MEDIUM]: 'rounded-md',
-  [Sizes.LARGE]: 'rounded-xl',
-};
-
 export const BOX_OVERFLOWS = {
   [Overflows.AUTO]: 'overflow-auto',
   [Overflows.HIDDEN]: 'overflow-hidden',
   [Overflows.VISIBLE]: 'overflow-visible',
 };
 
-export const BOX_BORDERS = {
-  [Sizes.NONE]: 'border-0',
-  [Sizes.SMALL]: 'border-[0.5px]',
-  [Sizes.BASE]: 'border',
-  [Sizes.MEDIUM]: 'border-2',
-  [Sizes.LARGE]: 'border-4',
+export const BOX_BORDER_VARIANTS = {
+  [BorderVariants.NONE]: 'border-0',
+  [BorderVariants.BASE_ALL]: 'border-[0.5px]',
+  [BorderVariants.BASE_TOP]: 'border-t-[0.5px]',
 };
 
-export const BOX_COLORS = {
+export const BOX_BORDER_COLORS = {
   [Colors.WHITE]: 'border-white',
   [Colors.BLACK]: 'border-black',
   [Colors.DARK]: 'border-dark',
@@ -259,4 +254,13 @@ export const BOX_COLORS = {
   [Colors.PRIMARY]: 'border-primary',
   [Colors.SECONDARY]: 'border-secondary',
   [Colors.TRANSPARENT]: 'border-transparent',
+  [Colors.DARKER_LIGHT]: 'border-darker-light',
+};
+
+export const BOX_BORDER_RADIUSES = {
+  [Sizes.NONE]: 'round-none',
+  [Sizes.SMALL]: 'rounded-sm',
+  [Sizes.BASE]: 'rounded',
+  [Sizes.MEDIUM]: 'rounded-md',
+  [Sizes.LARGE]: 'rounded-xl',
 };
