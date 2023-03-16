@@ -7,8 +7,15 @@ import {
   HEIGHT_MAPS,
   DIRECTION_MAPS,
   ITEM_ALIGN_MAPS,
+  JUSTIFY_CONTENTS,
 } from '@/shared/components/Layouts/classMappings';
-import { FlexProps, Heights, Widths } from '@/shared/components/Layouts/types';
+import {
+  AlignItems,
+  FlexProps,
+  Heights,
+  JustifyContents,
+  Widths,
+} from '@/shared/components/Layouts/types';
 import { Colors } from '@/shared/types/commons';
 
 const Flex: React.FC<FlexProps> = ({
@@ -17,14 +24,16 @@ const Flex: React.FC<FlexProps> = ({
   width = { mobile: undefined, tablet: undefined, desktop: undefined },
   height = { mobile: undefined, tablet: undefined, desktop: undefined },
   direction = { mobile: 'col-reverse', tablet: 'row', desktop: 'row' },
-  alignItems = 'start',
+  alignItem = AlignItems.START,
+  justifyContent = JustifyContents.START,
 }) => {
   const classes = classNames(
     'flex',
     DIRECTION_MAPS.mobile[direction.mobile],
     DIRECTION_MAPS.tablet[direction.tablet],
     DIRECTION_MAPS.desktop[direction.desktop],
-    ITEM_ALIGN_MAPS[alignItems],
+    ITEM_ALIGN_MAPS[alignItem],
+    JUSTIFY_CONTENTS[justifyContent],
     BG_COLOR_MAPS[bgColor],
     WIDTH_MAPS.mobile[width.mobile || Widths.FULL],
     WIDTH_MAPS.tablet[width.tablet || Widths.FULL],
