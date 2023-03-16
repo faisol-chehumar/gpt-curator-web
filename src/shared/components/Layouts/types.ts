@@ -83,14 +83,29 @@ export interface BoxProps extends BaseLayoutProps {
   border?: LayoutBorders;
 }
 
-type AlignItems = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
+export enum AlignItems {
+  START = 'START',
+  END = 'END',
+  CENTER = 'CENTER',
+  BASELINE = 'BASELINE',
+  STRETCH = 'STRETCH',
+}
+export enum JustifyContents {
+  START = 'START',
+  END = 'END',
+  CENTER = 'CENTER',
+  BETWEEN = 'BETWEEN',
+  AROUND = 'AROUND',
+  EVENLY = 'EVENLY',
+}
 type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';
 export type FlexDirection = {
   [key in Devices]: Direction;
 };
 export interface FlexProps extends BaseLayoutProps {
   direction?: FlexDirection;
-  alignItems?: AlignItems;
+  alignItem?: AlignItems;
+  justifyContent?: JustifyContents;
 }
 export interface SectionProps extends BaseProps {
   bgColor?: Colors;

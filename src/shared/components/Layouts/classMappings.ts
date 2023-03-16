@@ -1,6 +1,8 @@
 import {
+  AlignItems,
   BorderVariants,
   Heights,
+  JustifyContents,
   Overflows,
 } from '@/shared/components/Layouts/types';
 import { Positions, NegativeSpaces } from './../../types/commons';
@@ -93,11 +95,20 @@ export const DIRECTION_MAPS = {
 };
 
 export const ITEM_ALIGN_MAPS = {
-  start: 'items-start',
-  end: 'items-end',
-  center: 'items-center',
-  baseline: 'items-baseline',
-  stretch: 'items-stretch',
+  [AlignItems.START]: 'items-start',
+  [AlignItems.END]: 'items-end',
+  [AlignItems.CENTER]: 'items-center',
+  [AlignItems.BASELINE]: 'items-baseline',
+  [AlignItems.STRETCH]: 'items-stretch',
+};
+
+export const JUSTIFY_CONTENTS = {
+  [JustifyContents.START]: 'justify-start',
+  [JustifyContents.END]: 'justify-end',
+  [JustifyContents.CENTER]: 'justify-center',
+  [JustifyContents.BETWEEN]: 'justify-between',
+  [JustifyContents.EVENLY]: 'justify-evenly',
+  [JustifyContents.AROUND]: 'justify-around',
 };
 
 export const PADDING_Y_MAPS = {
