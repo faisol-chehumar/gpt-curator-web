@@ -5,7 +5,12 @@ import Image from 'next/image';
 import { Layouts, Typography, Button } from '@/shared/components';
 
 import { Colors, Sizes, Spaces } from '@/shared/types/commons';
-import { Aligns, Heights, Widths } from '@/shared/components/Layouts/types';
+import {
+  AlignItems,
+  Aligns,
+  Heights,
+  Widths,
+} from '@/shared/components/Layouts/types';
 
 import heroImage from '../../public/hero-image.svg';
 
@@ -32,7 +37,7 @@ const HeroSection = () => {
             desktop: Heights.FORTY_REM,
           }}
           direction={{ mobile: 'col-reverse', tablet: 'row', desktop: 'row' }}
-          alignItems="center"
+          alignItem={AlignItems.CENTER}
         >
           <Box
             width={{
