@@ -46,7 +46,7 @@ const RecentPromptSection = () => {
   return (
     <Section
       testId="recently-added-section"
-      paddingY={Spaces.LARGE}
+      padding={{ bottom: Spaces.LARGE }}
       bgColor={Colors.DARKER_DARK}
     >
       <Container>

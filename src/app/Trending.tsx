@@ -45,11 +45,7 @@ const Trending = () => {
   ];
 
   return (
-    <Section
-      testId="trending-section"
-      paddingY={Spaces.LARGE}
-      bgColor={Colors.DARKER_DARK}
-    >
+    <Section testId="trending-section" bgColor={Colors.DARKER_DARK}>
       <Container>
         <Title color={Colors.WHITE} variant="h2">
           Trending
