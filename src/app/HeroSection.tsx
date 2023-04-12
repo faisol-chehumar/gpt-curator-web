@@ -13,6 +13,7 @@ import {
 } from '@/shared/components/Layouts/types';
 
 import heroImage from '../../public/hero-image.svg';
+import robotImage from '../../public/prompt-craft-robot.png';
 
 const { Container, Section, Box, Flex } = Layouts;
 const { HeroHeadline, HeroTagline, Highlight } = Typography;
@@ -22,7 +23,7 @@ const HeroSection = () => {
     <Section
       testId="hero-section"
       bgColor={Colors.DARK}
-      paddingY={Spaces.LARGE}
+      padding={{ top: Spaces.LARGE, bottom: Spaces.LARGE }}
     >
       <Container>
         <Flex
@@ -75,7 +76,7 @@ const HeroSection = () => {
               <Image
                 priority
                 fill
-                src={heroImage}
+                src={robotImage}
                 alt="group of creative people illustration"
                 style={{
                   objectFit: 'contain',
