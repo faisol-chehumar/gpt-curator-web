@@ -107,9 +107,10 @@ export interface FlexProps extends BaseLayoutProps {
   alignItem?: AlignItems;
   justifyContent?: JustifyContents;
 }
+
 export interface SectionProps extends BaseProps {
   bgColor?: Colors;
-  paddingY?: Spaces;
+  padding?: LayoutPaddings;
   border?: LayoutBorders;
 }
 
