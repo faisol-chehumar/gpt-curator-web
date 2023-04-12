@@ -16,7 +16,7 @@ const Footer = () => {
     <Section
       testId="footer-section"
       bgColor={Colors.BLACK}
-      paddingY={Spaces.LARGE}
+      padding={{ top: Spaces.LARGE, bottom: Spaces.LARGE }}
       border={{ variant: BorderVariants.BASE_TOP, color: Colors.DARKER_LIGHT }}
     >
       <Container>

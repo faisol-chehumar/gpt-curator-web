@@ -21,9 +21,9 @@ const Section: React.FC<SectionProps> = ({
   bgColor = Colors.TRANSPARENT,
   padding = {
     top: undefined,
-    right: Spaces.NONE,
-    bottom: Spaces.NONE,
-    left: Spaces.NONE,
+    right: undefined,
+    bottom: undefined,
+    left: undefined,
   },
   border = { variant: undefined, color: undefined, radius: undefined },
 }) => {
