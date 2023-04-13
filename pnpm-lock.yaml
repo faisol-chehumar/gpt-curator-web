@@ -1511,7 +1511,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001478
-      electron-to-chromium: 1.4.359
+      electron-to-chromium: 1.4.361
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
     dev: true
@@ -1943,8 +1943,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium/1.4.359:
-    resolution: {integrity: sha512-OoVcngKCIuNXtZnsYoqlCvr0Cf3NIPzDIgwUfI9bdTFjXCrr79lI0kwQstLPZ7WhCezLlGksZk/BFAzoXC7GDw==}
+  /electron-to-chromium/1.4.361:
+    resolution: {integrity: sha512-VocVwjPp05HUXzf3xmL0boRn5b0iyqC7amtDww84Jb1QJNPBc7F69gJyEeXRoriLBC4a5pSyckdllrXAg4mmRA==}
     dev: true
 
   /emittery/0.13.1:
@@ -3599,7 +3599,7 @@ packages:
       http-proxy-agent: 5.0.0
       https-proxy-agent: 5.0.1
       is-potential-custom-element-name: 1.0.1
-      nwsapi: 2.2.3
+      nwsapi: 2.2.4
       parse5: 7.1.2
       saxes: 6.0.0
       symbol-tree: 3.2.4
@@ -4050,8 +4050,8 @@ packages:
       path-key: 4.0.0
     dev: true
 
-  /nwsapi/2.2.3:
-    resolution: {integrity: sha512-jscxIO4/VKScHlbmFBdV1Z6LXnLO+ZR4VMtypudUdfwtKxUN3TQcNFIHLwKtrUbDyHN4/GycY9+oRGZ2XMXYPw==}
+  /nwsapi/2.2.4:
+    resolution: {integrity: sha512-NHj4rzRo0tQdijE9ZqAx6kYDcoRwYwSYzCA8MY3JzfxlrvEU0jhnhJT9BhqhJs7I/dKcrDm6TyulaRqZPIhN5g==}
     dev: true
 
   /object-assign/4.1.1:

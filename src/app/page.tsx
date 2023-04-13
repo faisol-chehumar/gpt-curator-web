@@ -14,6 +14,15 @@ export default function Home() {
         bgColor={Colors.DARKER_DARK}
         padding={{ top: Spaces.LARGE, bottom: Spaces.LARGE }}
       >
+        {/* ข้างในรวบ AI tool สำหรัยงานที่เกี่ยวข้อง */}
+        <div>
+          AI assistance
+          <div>Web developer</div>
+          <div>Graphic designer</div>
+          <div>Marketer</div>
+          <div>Content creator</div>
+          <div>Investor</div>
+        </div>
         <Collections />
         <RecentAdded />
         <Trending />
