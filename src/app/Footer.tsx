@@ -27,7 +27,7 @@ const Footer = () => {
             </Text>
           </Box>
           <Box>
-            <Flex>
+            <Flex justifyContent={JustifyContents.END}>
               <Text color={Colors.LIGHTER_DARK}>Terms of services</Text>
               <Text color={Colors.LIGHTER_DARK}>Privacy policy</Text>
             </Flex>
