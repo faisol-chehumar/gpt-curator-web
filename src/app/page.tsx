@@ -1,12 +1,17 @@
-import Section from '@/shared/components/Layouts/Section';
+import Section from '@/components/Layout/Section/Section';
 import { Colors, Spaces } from '@/shared/types/commons';
+import { promptsService } from '@/services';
 
-import Collections from './Collections';
 import HeroSection from './HeroSection';
-import RecentAdded from './RecentAdded';
-import Trending from './Trending';
+import CollectionsSection from './CollectionsSection';
+import RecentlyAddedSection from './RecentlyAddedSection';
+import TrendingSection from './TrendingSection';
 
-export default function Home() {
+export default async function Home() {
+  const promptsCollections = await promptsService.getCollections(10);
+  const promptsRecentlyAdded = await promptsService.getRecentlyAdded(10);
+  const promptsTrending = await promptsService.getTrending(10);
+
   return (
     <>
       <HeroSection />
@@ -15,7 +20,8 @@ export default function Home() {
         padding={{ top: Spaces.LARGE, bottom: Spaces.LARGE }}
       >
         {/* ข้างในรวบ AI tool สำหรัยงานที่เกี่ยวข้อง */}
-        <div>
+        {/* <div>{collections.message}</div> */}
+        <div style={{ color: 'white' }}>
           AI assistance
           <div>Web developer</div>
           <div>Graphic designer</div>
@@ -23,9 +29,9 @@ export default function Home() {
           <div>Content creator</div>
           <div>Investor</div>
         </div>
-        <Collections />
-        <RecentAdded />
-        <Trending />
+        <TrendingSection data={promptsTrending} />
+        <RecentlyAddedSection data={promptsRecentlyAdded} />
+        <CollectionsSection data={promptsCollections} />
       </Section>
     </>
   );

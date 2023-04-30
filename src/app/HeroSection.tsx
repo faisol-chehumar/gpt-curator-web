@@ -2,20 +2,14 @@
 
 import Image from 'next/image';
 
-import { Layouts, Typography, Button } from '@/shared/components';
+import { Layout, Typography, Button } from '@/components';
 
 import { Colors, Sizes, Spaces } from '@/shared/types/commons';
-import {
-  AlignItems,
-  Aligns,
-  Heights,
-  Widths,
-} from '@/shared/components/Layouts/types';
+import { AlignItems, Aligns, Heights, Widths } from '@/components/Layout/types';
 
-import heroImage from '../../public/hero-image.svg';
 import robotImage from '../../public/prompt-craft-robot.png';
 
-const { Container, Section, Box, Flex } = Layouts;
+const { Container, Section, Box, Flex } = Layout;
 const { HeroHeadline, HeroTagline, Highlight } = Typography;
 
 const HeroSection = () => {

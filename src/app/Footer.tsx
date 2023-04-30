@@ -1,15 +1,12 @@
 import React from 'react';
 
-import Box from '@/shared/components/Layouts/Box';
-import Text from '@/shared/components/Typography/Text';
+import Box from '@/components/Layout/Box';
+import Text from '@/components/Typography/Text';
 import { Colors, Spaces } from '@/shared/types/commons';
-import {
-  BorderVariants,
-  JustifyContents,
-} from '@/shared/components/Layouts/types';
-import Section from '@/shared/components/Layouts/Section';
-import Container from '@/shared/components/Layouts/Container';
-import Flex from '@/shared/components/Layouts/Flex';
+import { BorderVariants, JustifyContents } from '@/components/Layout/types';
+import Section from '@/components/Layout/Section';
+import Container from '@/components/Layout/Container';
+import Flex from '@/components/Layout/Flex';
 
 const Footer = () => {
   return (

@@ -8,6 +8,10 @@ import '../styles/globals.css';
 
 import Footer from './Footer';
 
+if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+  require('../mock-apis');
+}
+
 export const metadata = {
   title: {
     default: `Discover Creative Prompts | ${AppInfo.NAME}`,
