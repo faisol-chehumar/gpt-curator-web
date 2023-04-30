@@ -5,6 +5,15 @@ export interface BaseProps {
   testId?: TestId;
 }
 
+export type ID = string;
+
+export enum Variants {
+  SMALL = 'SMALL',
+  BASE = 'BASE',
+  MEDIUM = 'MEDIUM',
+  LARGE = 'LARGE',
+}
+
 export enum Sizes {
   NONE = 'NONE',
   SMALL = 'SMALL',
@@ -43,7 +52,7 @@ export enum Colors {
   LIGHTER_DARK = 'lighter-dark',
   WHITE = 'white',
   BLACK = 'black',
-  DARKER_LIGHT = 'DARKER_LIGHT',
+  DARKER_LIGHT = 'darker-light',
 }
 
 export enum Positions {
@@ -55,3 +64,5 @@ export enum Positions {
   // FIXED = 'fixed',
   // STICKY = 'sticky',
 }
+
+export type Title = string;
