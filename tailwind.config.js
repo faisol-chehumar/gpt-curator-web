@@ -23,7 +23,7 @@ module.exports = {
           DEFAULT: colors.primary,
           dark: colors.primary_darker,
         },
-        'darker-light': colors.transparent_white,
+        'darker-light': colors.darker_light,
       },
       spacing: {
         xxs: spaces.xxs,

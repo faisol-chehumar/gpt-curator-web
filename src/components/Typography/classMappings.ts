@@ -1,4 +1,5 @@
 import { Colors, Sizes } from '@/shared/types/commons';
+
 export const TEXT_COLOR_MAPS = {
   [Colors.PRIMARY]: 'text-primary',
   [Colors.SECONDARY]: 'text-secondary',
@@ -23,4 +24,11 @@ export const TEXT_SIZES = {
   [Sizes.BASE]: 'text-sm',
   [Sizes.MEDIUM]: 'text-base',
   [Sizes.LARGE]: 'text-lg',
+};
+
+export const TITLE_SIZES = {
+  [Sizes.SMALL]: 'text-lg',
+  [Sizes.BASE]: 'text-2xl',
+  [Sizes.MEDIUM]: 'text-4xl',
+  [Sizes.LARGE]: 'text-8xl',
 };

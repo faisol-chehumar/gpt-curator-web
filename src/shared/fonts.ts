@@ -1,6 +1,6 @@
-import { Poppins, Open_Sans } from 'next/font/google';
+import { Roboto_Slab, Open_Sans } from 'next/font/google';
 
-export const poppins = Poppins({
+export const robotoSlab = Roboto_Slab({
   subsets: ['latin'],
   display: 'swap',
   weight: '600',

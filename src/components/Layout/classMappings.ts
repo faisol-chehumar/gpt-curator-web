@@ -18,7 +18,7 @@ export const BG_COLOR_MAPS = {
   'darker-dark': 'bg-darker-dark',
   white: 'bg-white',
   black: 'bg-black',
-  [Colors.DARKER_LIGHT]: 'bg-black',
+  [Colors.DARKER_LIGHT]: 'bg-darker-light',
 };
 
 export const WIDTH_MAPS = {
@@ -26,22 +26,28 @@ export const WIDTH_MAPS = {
     [Widths.AUTO]: 'w-auto',
     [Widths.FULL]: 'w-full',
     [Widths.FULL_SCREEN]: 'w-screen',
+    [Widths.FOUR_TWELVE]: 'w-4/12',
     [Widths.FIVE_TWELVE]: 'w-5/12',
     [Widths.SEVEN_TWELVE]: 'w-7/12',
+    [Widths.EIGHT_TWELVE]: 'w-8/12',
   },
   tablet: {
     [Widths.AUTO]: 'md:w-auto',
     [Widths.FULL]: 'md:w-full',
     [Widths.FULL_SCREEN]: 'md:w-screen',
+    [Widths.FOUR_TWELVE]: 'md:w-4/12',
     [Widths.FIVE_TWELVE]: 'md:w-5/12',
     [Widths.SEVEN_TWELVE]: 'md:w-7/12',
+    [Widths.EIGHT_TWELVE]: 'md:w-8/12',
   },
   desktop: {
     [Widths.AUTO]: 'lg:w-auto',
     [Widths.FULL]: 'lg:w-full',
     [Widths.FULL_SCREEN]: 'lg:w-screen',
+    [Widths.FOUR_TWELVE]: 'lg:w-4/12',
     [Widths.FIVE_TWELVE]: 'lg:w-5/12',
     [Widths.SEVEN_TWELVE]: 'lg:w-7/12',
+    [Widths.EIGHT_TWELVE]: 'lg:w-8/12',
   },
 };
 
@@ -52,6 +58,7 @@ export const HEIGHT_MAPS = {
     [Heights.FULL]: 'h-full',
     [Heights.SIXTEEN_REM]: 'h-[16rem]',
     [Heights.FORTY_REM]: 'h-[40rem]',
+    [Heights.FIFTY_REM]: 'h-[50rem]',
   },
   tablet: {
     [Heights.AUTO]: 'md:h-auto',
@@ -59,6 +66,7 @@ export const HEIGHT_MAPS = {
     [Heights.FULL]: 'md:h-full',
     [Heights.SIXTEEN_REM]: 'md:h-[16rem]',
     [Heights.FORTY_REM]: 'md:h-[40rem]',
+    [Heights.FIFTY_REM]: 'md:h-[50rem]',
   },
   desktop: {
     [Heights.AUTO]: 'lg:h-auto',
@@ -66,6 +74,7 @@ export const HEIGHT_MAPS = {
     [Heights.FULL]: 'lg:h-full',
     [Heights.SIXTEEN_REM]: 'lg:h-[16rem]',
     [Heights.FORTY_REM]: 'lg:h-[40rem]',
+    [Heights.FIFTY_REM]: 'lg:h-[50rem]',
   },
 };
 

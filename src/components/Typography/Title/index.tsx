@@ -1,19 +1,25 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import { poppins } from '@/shared/fonts';
+import { Colors, Sizes } from '@/shared/types/commons';
+import { robotoSlab } from '@/shared/fonts';
+
 import { TitleProps } from '@/components/Typography/types';
-import { TEXT_COLOR_MAPS } from '@/components/Typography/classMappings';
-import { Colors } from '@/shared/types/commons';
+import {
+  TEXT_COLOR_MAPS,
+  TITLE_SIZES,
+} from '@/components/Typography/classMappings';
 
 const Title = ({
   children,
   color = Colors.BLACK,
   variant = 'h2',
+  size = Sizes.BASE,
 }: TitleProps) => {
   const classes = classNames(
-    'text-xl mb-md',
-    poppins.className,
+    'mb-md',
+    TITLE_SIZES[size],
+    robotoSlab.className,
     TEXT_COLOR_MAPS[color]
   );
 

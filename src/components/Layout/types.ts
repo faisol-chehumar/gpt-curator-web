@@ -12,8 +12,10 @@ export enum Widths {
   AUTO = 'AUTO',
   FULL = 'FULL',
   FULL_SCREEN = 'FULL_SCREEN',
+  FOUR_TWELVE = 'FOUR_TWELVE',
   FIVE_TWELVE = 'FIVE_TWELVE',
   SEVEN_TWELVE = 'SEVEN_TWELVE',
+  EIGHT_TWELVE = 'EIGHT_TWELVE',
 }
 export type LayoutWidths = {
   [key in Devices]?: Widths;
@@ -22,8 +24,9 @@ export enum Heights {
   AUTO = 'AUTO',
   FIT = 'FIT',
   FULL = 'FULL',
-  FORTY_REM = '40rem',
   SIXTEEN_REM = '16rem',
+  FORTY_REM = '40rem',
+  FIFTY_REM = '50rem',
 }
 
 export type LayoutHeights = {
