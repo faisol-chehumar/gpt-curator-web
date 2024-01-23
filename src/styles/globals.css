@@ -2,6 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "design-token.css";
+
+@layer base {
+  :root {
+    --background: var(--color-white);
+    --foreground: var(--color-black-knight);
+
+    --card: var(--color-white);
+    --card-foreground: var(--color-black-knight);
+
+    --popover: var(--color-white);
+    --popover-foreground: var(--color-black-knight);
+
+    --primary: var(--color-liberty-blue);
+    --primary-foreground: var(--color-wash-me);
+
+    --secondary: var(--color-child-of-light);
+    --secondary-foreground: var(--color-liberty-blue);
+
+    --muted: var(--color-child-of-light);
+    --muted-foreground: var(--color-saltbox-blue);
+
+    --accent: var(--color-child-of-light);
+    --accent-foreground: var(--color-liberty-blue);
+
+    --destructive: var(--color-carmine-pink);
+    --destructive-foreground: var(--color-wash-me);
+
+    --border: var(--color-bellflower-blue);
+    --input: var(--color-bellflower-blue);
+    --ring: var(--color-black-knight);
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: var(--color-black-knight);
+    --foreground: var(--color-wash-me);
+
+    --card: var(--color-black-knight);
+    --card-foreground: var(--color-wash-me);
+
+    --popover: var(--color-black-knight);
+    --popover-foreground: var(--color-wash-me);
+
+    --primary: var(--color-wash-me);
+    --primary-foreground: var(--color-liberty-blue);
+
+    --secondary: var(--color-midnight-express);
+    --secondary-foreground: var(--color-wash-me);
+
+    --muted: var(--color-midnight-express);
+    --muted-foreground: var(--color-blue-blouse);
+
+    --accent: var(--color-midnight-express);
+    --accent-foreground: var(--color-wash-me);
+
+    --destructive: var(--color-falu-red);
+    --destructive-foreground: var(--color-wash-me);
+
+    --border: var(--color-midnight-express);
+    --input: var(--color-midnight-express);
+    --ring: var(--color-blue-reflection);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 /* the slides */
 .slick-slider {
   overflow: hidden;

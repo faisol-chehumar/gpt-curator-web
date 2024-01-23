@@ -1,7 +1,14 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
+  "workbench.editor.enablePreview": true,
   "cSpell.words": [
-    "testid"
+    "clsx",
+    "falu",
+    "flexbox",
+    "Roboto",
+    "stylelint",
+    "testid",
+    "uxui"
   ]
 }

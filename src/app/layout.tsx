@@ -1,18 +1,21 @@
-import AppInfo from '@/shared/static-texts/app-info.json';
-import { openSans } from '@/shared/fonts';
+import { Metadata } from 'next';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import AppInfo from '@/shared/configs/app-info.json';
+import { openSans } from '@/styles/fonts';
+import { cn } from '@/lib/tailwind/utils';
+
 import '../styles/globals.css';
 
-import Footer from './Footer';
+import Footer from '@/features/footer'
 
-if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
-  require('../mock-apis');
-}
+// if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
+//   require('../mock-apis');
+// }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: `Discover Creative Prompts | ${AppInfo.NAME}`,
     template: `%s | ${AppInfo.NAME}`,
@@ -20,14 +23,19 @@ export const metadata = {
   description: AppInfo.DESCRIPTION,
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={`${openSans.className} min-h-screen`}>
+    <html lang="en" className="dark">
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          openSans.variable
+        )}
+      >
         {children}
         <Footer />
       </body>

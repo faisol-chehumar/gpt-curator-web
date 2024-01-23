@@ -7,7 +7,5 @@
     ".next/**",
     "public/**"
   ],
-  "rules": {
-    // Add custom rules here
-  }
+  "rules": {}
 }

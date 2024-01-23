@@ -1,4 +1,4 @@
-import * as endpoints from '../configs/endpoints';
+import * as endpoints from './endpoints';
 
 export const getCollections = async (limit: number) => {
   const res = await fetch(endpoints.promptsCollections, {
