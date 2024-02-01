@@ -1,6 +1,6 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
-const responsiveVariants =  ['xs', 'sm', 'md', 'lg', 'xl', '2xl']
+const responsiveVariants = ['xs', 'sm', 'md', 'lg', 'xl', '2xl'];
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -39,9 +39,15 @@ module.exports = {
       pattern: /^(divide-x|divide-y)|(divide-x|divide-y)-([0-9])/,
       variants: responsiveVariants,
     },
-        {
+    {
       pattern: /^(flex-row|flex-col)/,
       variants: responsiveVariants,
+    },
+    {
+      pattern: /^text-(left|right|center)/,
+    },
+    {
+      pattern: /^font-(bold|normal)/,
     },
   ],
   theme: {
