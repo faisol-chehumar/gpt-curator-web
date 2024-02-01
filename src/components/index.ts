@@ -1,3 +1,3 @@
 export * from './ui';
 
-export { default as ImageCard } from './image-card';
+export * from './interactive-card';

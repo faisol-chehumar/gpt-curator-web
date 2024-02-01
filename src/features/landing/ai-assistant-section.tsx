@@ -1,12 +1,10 @@
-import Link from 'next/link';
-
 import softwareDeveloper from '../../../public/images/software-developer.png';
 import uxuiDesigner from '../../../public/images/graphic-designer.png';
 import investor from '../../../public/images/investor.png';
 import generalAssistant from '../../../public/images/general-assistant.png';
 
 import { Box, Container, Flex, Heading, Section } from '@/components/ui';
-import { ImageCard } from '@/components';
+import { LinkCard } from '@/components';
 
 const AiAssistantSection = () => {
   return (
@@ -25,23 +23,25 @@ const AiAssistantSection = () => {
       </Container>
       <Flex direction={{ initial: 'col', md: 'row' }} gap={4} p={4}>
         <Box width={{ initial: 'full', md: '3/12' }} height="min">
-          <Link href="/assistant/software-developer">
-            <ImageCard
-              src={softwareDeveloper}
-              alt="Young girl coding"
-              caption="Software developer"
-            />
-          </Link>
+          <LinkCard
+            title="Software developer"
+            subTitle="Help me make great software"
+            href="/assistant/software-developer"
+            src={softwareDeveloper}
+            alt="Young girl coding"
+          />
         </Box>
         <Box
           width={{ initial: 'full', md: '3/12' }}
           height="min"
           positions="relative"
         >
-          <ImageCard
+          <LinkCard
+            title="UX/UI Designer"
+            subTitle="Help me make great software"
             src={uxuiDesigner}
             alt="Young girl drawing"
-            caption="UX/UI Designer"
+            href="/assistant/software-developer"
           />
         </Box>
         <Box
@@ -49,10 +49,12 @@ const AiAssistantSection = () => {
           height="min"
           positions="relative"
         >
-          <ImageCard
+          <LinkCard
+            title="Investor"
+            subTitle="Help me make great software"
             src={investor}
             alt="Man show his dashboard"
-            caption="Investor"
+            href="/assistant/software-developer"
           />
         </Box>
         <Box
@@ -60,10 +62,12 @@ const AiAssistantSection = () => {
           height="min"
           positions="relative"
         >
-          <ImageCard
+          <LinkCard
+            title="General Assistant"
+            subTitle="Help me make great software"
             src={generalAssistant}
             alt="Old man typing"
-            caption="General Assistant"
+            href="/assistant/software-developer"
           />
         </Box>
       </Flex>

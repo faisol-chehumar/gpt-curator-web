@@ -9,7 +9,7 @@ import { cn } from '@/lib/tailwind/utils';
 
 import '../styles/globals.css';
 
-import Footer from '@/features/footer'
+import Footer from '@/features/footer';
 
 // if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
 //   require('../mock-apis');
