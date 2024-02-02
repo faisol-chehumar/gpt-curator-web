@@ -3,13 +3,13 @@ import { Metadata } from 'next';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import AppInfo from '@/shared/configs/app-info.json';
 import { openSans } from '@/styles/fonts';
 import { cn } from '@/lib/tailwind/utils';
-
-import '../styles/globals.css';
+import AppInfo from '@/shared/configs/app-info.json';
 
 import Footer from '@/features/footer';
+
+import '../styles/globals.css';
 
 // if (process.env.NEXT_PUBLIC_API_MOCKING === 'enabled') {
 //   require('../mock-apis');
