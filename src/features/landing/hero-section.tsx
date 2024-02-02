@@ -15,12 +15,7 @@ import aiAssistant from '../../../public/images/ai-assistant.png';
 
 const HeroSection = () => {
   return (
-    <Section
-      id="hero-section"
-      pb={{ initial: 6, md: 0 }}
-      borderBottom
-      borderColor="secondary"
-    >
+    <Section id="hero-section" pb={{ initial: 6, md: 0 }}>
       <Container>
         <Flex
           direction={{ initial: 'col', md: 'row' }}
@@ -29,7 +24,7 @@ const HeroSection = () => {
           gap={2}
         >
           <Box
-            width={{ initial: 'full', md: '6/12' }}
+            width={{ initial: 'full', md: '7/12' }}
             height={{ initial: 'full', md: 'screen' }}
             positions="relative"
           >
@@ -39,13 +34,13 @@ const HeroSection = () => {
               alt="AI assistant illustration"
               sizes="(max-width: 375px) 50vw, (max-width: 768px) 50vw, 100vw"
               style={{
-                objectFit: 'contain',
+                objectFit: 'cover',
               }}
               src={aiAssistant}
             />
           </Box>
 
-          <Flex width={{ md: '6/12' }} direction="col" gap={6}>
+          <Flex width={{ md: '5/12' }} direction="col" gap={6}>
             <Box spaceY={2}>
               <Heading>
                 Unlock productivity with <Em>GPT Curator</Em>

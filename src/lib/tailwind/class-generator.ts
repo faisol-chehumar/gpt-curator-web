@@ -45,12 +45,10 @@ function withBreakpoints(
 
       if (classPrefix && typeof classPrefix !== 'boolean') {
         const initialClassName =
-          strValue === 'true' || strValue === '0'
-            ? classPrefix
-            : `${classPrefix}-${strValue}`;
+          strValue === 'true' ? classPrefix : `${classPrefix}-${strValue}`;
 
         const responsiveClassName =
-          strValue === 'true' || strValue === '0'
+          strValue === 'true'
             ? `${bp}:${classPrefix}`
             : `${bp}:${classPrefix}-${strValue}`;
 
