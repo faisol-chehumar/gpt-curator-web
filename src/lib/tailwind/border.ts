@@ -5,6 +5,7 @@ type DefaultBorder = Responsive<true | 0 | 2 | 4 | 8>;
 
 type Border = DefaultBorder;
 type BorderBottom = DefaultBorder;
+type BorderTop = DefaultBorder;
 type BorderColor =
   | 'inherit'
   | 'currentColor'
@@ -16,6 +17,7 @@ type BorderColor =
 
 type BorderProps = {
   border?: Border;
+  borderTop?: BorderTop;
   borderBottom?: BorderBottom;
   borderColor?: BorderColor;
   borderY?: DefaultBorder;
@@ -26,6 +28,7 @@ type BorderProps = {
 
 const borderClassMapping: ClassMapping<BorderProps> = {
   border: 'border',
+  borderTop: 'border-t',
   borderBottom: 'border-b',
   borderColor: 'border',
   borderX: 'border-x',

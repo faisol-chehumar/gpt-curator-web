@@ -22,13 +22,18 @@ interface SectionProps
 
 const Section = React.forwardRef<SectionElement, SectionProps>(
   (props, forwardedRef) => {
-    const { children, id } = props;
+    const { children, id, className } = props;
 
     const spacingClasses = generateSpacingClasses(props);
     const backgroundClasses = generateBackgroundClasses(props);
     const borderClasses = generateBorderClasses(props);
 
-    const classNames = cn(spacingClasses, backgroundClasses, borderClasses);
+    const classNames = cn(
+      spacingClasses,
+      backgroundClasses,
+      borderClasses,
+      className
+    );
 
     return (
       <section ref={forwardedRef} id={id} className={classNames}>
