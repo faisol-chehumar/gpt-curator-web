@@ -48,9 +48,11 @@ const HeroSection = () => {
           <Flex width={{ md: '6/12' }} direction="col" gap={6}>
             <Box spaceY={2}>
               <Heading>
-                Unlock creativity with <Em>Prompt Craft</Em>
+                Unlock productivity with <Em>GPT Curator</Em>
               </Heading>
-              <Lead>Unleash your imagination with our curated prompts.</Lead>
+              <Lead>
+                Unleash your imagination with our curated prompts and tools.
+              </Lead>
             </Box>
             <Button>Explore</Button>
           </Flex>
