@@ -26,9 +26,9 @@ const AiAssistantSection = () => {
           <LinkCard
             title="Software developer"
             subTitle="Help me make great software"
-            href="/assistant/software-developer"
             src={softwareDeveloper}
             alt="Young girl coding"
+            href="/assistant/software-developer"
           />
         </Box>
         <Box
@@ -38,7 +38,7 @@ const AiAssistantSection = () => {
         >
           <LinkCard
             title="UX/UI Designer"
-            subTitle="Help me make great software"
+            subTitle="Help me design beautiful app"
             src={uxuiDesigner}
             alt="Young girl drawing"
             href="/assistant/software-developer"
@@ -51,7 +51,7 @@ const AiAssistantSection = () => {
         >
           <LinkCard
             title="Investor"
-            subTitle="Help me make great software"
+            subTitle="Advise me professional writings"
             src={investor}
             alt="Man show his dashboard"
             href="/assistant/software-developer"

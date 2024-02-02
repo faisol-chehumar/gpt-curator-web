@@ -45,11 +45,9 @@ const LinkCard = ({
 }: LinkCardProps) => {
   const spaceClasses = generateSpacingClasses(rest);
 
-  const cardClasses = cn(spaceClasses);
-
   return (
-    <Link href={href}>
-      <Card className={cardClasses}>
+    <Link href={href} className={cn(spaceClasses)}>
+      <Card className="hover:bg-secondary">
         <CardHeader>
           <CardTitle>{title}</CardTitle>
           <CardDescription>{subTitle}</CardDescription>
