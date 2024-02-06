@@ -1,3 +1,3 @@
-export { default as HeroSection } from './hero-section';
-export { default as AiAssistantSection } from './ai-assistant-section';
-export { default as ImagesPromptCarouselSection } from './images-prompt-carousel-section';
+export { Hero } from './hero';
+export { AiAssistantFeatures } from './ai-assistant-features';
+export { GenerativeImagesCarousel } from './generative-images-carousel';

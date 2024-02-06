@@ -1,11 +1,11 @@
 // import { promptsService } from '@/services';
 
 import {
-  HeroSection,
-  AiAssistantSection,
-  ImagesPromptCarouselSection,
+  Hero,
+  AiAssistantFeatures,
+  GenerativeImagesCarousel,
 } from '@/features/landing';
-import { Separator } from '@/components/ui';
+import { Container, Section, Separator } from '@/components/ui';
 
 export default async function Home() {
   // const [promptsCollections, promptsRecentlyAdded, promptsTrending] =
@@ -17,11 +17,23 @@ export default async function Home() {
 
   return (
     <>
-      <HeroSection />
+      <Section id="hero-section" pb={{ initial: 6, md: 0 }}>
+        <Container>
+          <Hero />
+        </Container>
+      </Section>
       <Separator />
-      <AiAssistantSection />
+      <Section id="ai-assistance-section" py={16}>
+        <Container>
+          <AiAssistantFeatures />
+        </Container>
+      </Section>
       <Separator />
-      <ImagesPromptCarouselSection />
+      <Section id="ai-assistance-section" py={16}>
+        <Container>
+          <GenerativeImagesCarousel />
+        </Container>
+      </Section>
     </>
   );
 }
