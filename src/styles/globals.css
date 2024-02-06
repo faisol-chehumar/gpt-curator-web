@@ -75,18 +75,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* the slides */
-.slick-slider {
-  overflow: hidden;
-}
-
-/* the parent */
-.slick-list {
-  margin: 0 -6px;
-}
-
-/* item */
-.carousel__item {
-  margin: 0 9px;
-}
