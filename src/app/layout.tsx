@@ -1,8 +1,5 @@
 import { Metadata } from 'next';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
 import { openSans } from '@/styles/fonts';
 import { cn } from '@/lib/tailwind/utils';
 import AppInfo from '@/shared/configs/app-info.json';
