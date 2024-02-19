@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Card, CardContent, CardFooter } from '../ui/card';
 import {
   Carousel,
@@ -9,9 +11,8 @@ import {
 import { Image } from '../ui/image';
 import { Grid } from '../ui/grid';
 import { Text } from '../ui/text';
+import { badgeVariants } from '../ui/badge';
 import { Flex } from '../ui/flex';
-
-import generalAssistant from '../../../public/images/general-assistant.png';
 
 interface Items {
   images: string[];
@@ -37,61 +38,26 @@ const MultiImagesCarousel = ({ items = [] }: MultiImagesCarouselProps) => {
             <Card>
               <CardContent className="flex aspect-auto items-center justify-center p-0 pb-6">
                 <Grid col={6} width="full" gap={1}>
-                  <Grid colSpan={6}>
-                    <Image
-                      src={generalAssistant}
-                      alt="alt"
-                      objectFit="cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      ratio={5 / 3}
-                      fill
+                  <HighlightImage src={item.images[0]} />
+                  {item.images.slice(1).map((image, idx) => (
+                    <SmallImage
+                      key={idx}
+                      src={image}
+                      isLastImage={idx === item.images.length - 2}
                     />
-                  </Grid>
-                  <Grid colSpan={2}>
-                    <Image
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1399&q=80"
-                      alt={'alt'}
-                      objectFit="cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      ratio={1}
-                      fill
-                    />
-                  </Grid>
-                  <Grid colSpan={2}>
-                    <Image
-                      src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                      alt={'alt'}
-                      objectFit="cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      ratio={1}
-                      fill
-                    />
-                  </Grid>
-                  <Grid colSpan={2} positions="relative">
-                    <Image
-                      src="https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                      alt={'alt'}
-                      objectFit="cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      ratio={1}
-                      fill
-                    />
-                    <Flex
-                      inset="0"
-                      positions="absolute"
-                      bgColor="slate-900/80"
-                      justify="center"
-                      items="center"
-                    >
-                      <Text className="items-center">+ 23</Text>
-                    </Flex>
-                  </Grid>
+                  ))}
                 </Grid>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex-col items-start space-y-3">
                 <Text variant="small" weight="semibold">
                   {item.caption}
                 </Text>
+                <Link
+                  className={badgeVariants({ variant: 'default' })}
+                  href="/xxx"
+                >
+                  Badge
+                </Link>
               </CardFooter>
             </Card>
           </CarouselItem>
@@ -102,6 +68,53 @@ const MultiImagesCarousel = ({ items = [] }: MultiImagesCarouselProps) => {
     </Carousel>
   );
 };
-
 MultiImagesCarousel.displayName = 'MultiImagesCarousel';
+
+const HighlightImage = ({ src }: { src: string }) => {
+  return (
+    <Grid colSpan={6}>
+      <Image
+        src={src}
+        alt="alt"
+        objectFit="cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        ratio={5 / 3}
+        fill
+      />
+    </Grid>
+  );
+};
+
+const SmallImage = ({
+  src,
+  isLastImage,
+}: {
+  src: string;
+  isLastImage: boolean;
+}) => {
+  return (
+    <Grid colSpan={2} positions={isLastImage ? 'relative' : 'static'}>
+      <Image
+        src={src}
+        alt="alt"
+        objectFit="cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        ratio={1}
+        fill
+      />
+      {isLastImage ? (
+        <Flex
+          inset="0"
+          positions="absolute"
+          bgColor="slate-900/80"
+          justify="center"
+          items="center"
+        >
+          <Text className="items-center">+ 23</Text>
+        </Flex>
+      ) : null}
+    </Grid>
+  );
+};
+
 export { MultiImagesCarousel };

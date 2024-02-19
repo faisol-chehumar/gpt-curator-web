@@ -13,4 +13,6 @@ export { Separator } from './separator';
 export { Image } from './image';
 export { type Alt } from './image';
 
+export { Badge } from './badge';
+
 export * from './carousel';

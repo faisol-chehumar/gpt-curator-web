@@ -3,7 +3,7 @@
 import {
   Hero,
   AiAssistantFeatures,
-  GenerativeImagesCarousel,
+  ImageCuratedPrompt,
 } from '@/features/landing';
 import { Container, Section, Separator } from '@/components/ui';
 
@@ -31,7 +31,7 @@ export default async function Home() {
       <Separator />
       <Section id="ai-assistance-section" py={16}>
         <Container>
-          <GenerativeImagesCarousel />
+          <ImageCuratedPrompt />
         </Container>
       </Section>
     </>
