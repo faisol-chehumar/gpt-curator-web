@@ -25,7 +25,7 @@ type FlexboxProps = {
   wrap?: FlexWrap;
   gap?: Gap;
   justify?: JustifyContent;
-  align?: AlignItems;
+  items?: AlignItems;
 };
 
 const flexboxClassMapping: ClassMapping<FlexboxProps> = {
@@ -34,7 +34,7 @@ const flexboxClassMapping: ClassMapping<FlexboxProps> = {
   wrap: 'flex',
   gap: 'gap',
   justify: 'justify',
-  align: 'items',
+  items: 'items',
 };
 
 function generateFlexboxClasses(props: FlexboxProps) {

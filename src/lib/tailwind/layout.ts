@@ -16,12 +16,14 @@ type LayoutProps = {
   display?: Display;
   positions?: Position;
   overflow?: Overflow;
+  inset?: Responsive<string | number>;
 };
 
 const layoutClassMapping: ClassMapping<LayoutProps> = {
   display: null,
   positions: null,
   overflow: 'overflow',
+  inset: 'inset',
 };
 
 function generateLayoutClasses(props: LayoutProps) {

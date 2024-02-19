@@ -19,4 +19,7 @@ export type * from './border';
 export { generateGridClasses } from './grid';
 export type * from './grid';
 
+export { generateBackgroundClasses } from './background';
+export type * from './background';
+
 export type { Responsive } from './responsive';

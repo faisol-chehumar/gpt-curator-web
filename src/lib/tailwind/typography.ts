@@ -23,7 +23,7 @@ type TypographyProps = {
   size?: FontSize;
   transform?: TextTransform;
   align?: 'left' | 'right' | 'center';
-  weight?: 'light' | 'normal' | 'medium' | 'bold';
+  weight?: 'light' | 'normal' | 'medium' | 'bold' | 'semibold';
 };
 
 const typographyClassMapping: ClassMapping<TypographyProps> = {
