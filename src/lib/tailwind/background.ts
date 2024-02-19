@@ -1,7 +1,7 @@
 import { Responsive } from './responsive';
 import { generateClassesFromProps, type ClassMapping } from './class-generator';
 
-type BackgroundColor = Responsive<'primary' | 'secondary'>;
+type BackgroundColor = Responsive<'primary' | 'secondary' | 'slate-900/80'>;
 
 type BackgroundProps = {
   bgColor?: BackgroundColor;
