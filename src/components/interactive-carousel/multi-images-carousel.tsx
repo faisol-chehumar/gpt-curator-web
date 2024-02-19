@@ -32,15 +32,15 @@ const MultiImagesCarousel = ({ items = [] }: MultiImagesCarouselProps) => {
         {items.map((item, index) => (
           <CarouselItem key={index} className="md:basis-2/12">
             <Card>
-              <CardContent className="flex aspect-square items-center justify-center">
+              <CardContent className="flex aspect-auto items-center justify-center p-0 pb-6">
                 <div className="col-span-2 grid w-full grid-cols-6 gap-1">
-                  <div className=" col-span-6 max-h-[6rem] overflow-hidden">
+                  <div className=" col-span-6 max-h-[7.8rem] overflow-hidden">
                     <Image
                       src={generalAssistant}
-                      alt={'alt'}
+                      alt="alt"
                       objectFit="cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      ratio={4 / 3}
+                      ratio={5 / 3}
                       fill
                     />
                   </div>

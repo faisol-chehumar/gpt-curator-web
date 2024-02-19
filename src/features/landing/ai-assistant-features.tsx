@@ -19,7 +19,7 @@ const AiAssistantFeatures = () => {
         What a kind of work
         <br /> do you do?
       </Heading>
-      <Flex direction={{ initial: 'col', md: 'row' }} gap={4} p={4}>
+      <Flex direction={{ initial: 'col', md: 'row' }} gap={4}>
         <Box width={{ initial: 'full', md: '3/12' }} height="min">
           <LinkCard
             title="Software developer"
