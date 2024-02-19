@@ -12,3 +12,5 @@ export { Separator } from './separator';
 
 export { Image } from './image';
 export { type Alt } from './image';
+
+export * from './carousel';
