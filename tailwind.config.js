@@ -46,9 +46,9 @@ module.exports = {
     {
       pattern: /^text-(left|right|center)/,
     },
-    // {
-    //   pattern: /^font-(light | normal | medium | bold | semibold)/,
-    // },
+    {
+      pattern: /^font-(light|normal|medium|bold|semibold)/,
+    },
     {
       pattern: /^(grid-cols|grid-rows)-([0-9]+(\.[0-5])?|96)/,
       variants: responsiveVariants,
@@ -75,7 +75,7 @@ module.exports = {
       center: true,
       padding: '2rem',
       screens: {
-        '2xl': '1400px',
+        '2xl': '2400px',
       },
     },
     extend: {
