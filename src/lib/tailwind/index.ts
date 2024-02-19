@@ -16,4 +16,7 @@ export type * from './flexbox';
 export { generateBorderClasses } from './border';
 export type * from './border';
 
+export { generateGridClasses } from './grid';
+export type * from './grid';
+
 export type { Responsive } from './responsive';
