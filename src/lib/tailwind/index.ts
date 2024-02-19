@@ -10,8 +10,8 @@ export type * from './sizing';
 export { generateLayoutClasses } from './layout';
 export type * from './layout';
 
-export { generateFlexboxClasses } from './flexbox-grid';
-export type * from './flexbox-grid';
+export { generateFlexboxClasses } from './flexbox';
+export type * from './flexbox';
 
 export { generateBorderClasses } from './border';
 export type * from './border';

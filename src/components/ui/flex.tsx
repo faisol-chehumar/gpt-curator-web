@@ -10,6 +10,7 @@ import {
   generateSpacingClasses,
   type FlexboxProps,
 } from '@/lib/tailwind';
+
 import { BoxProps } from './box';
 
 type FlexElement = React.ElementRef<'div'>;
