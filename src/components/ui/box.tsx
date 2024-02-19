@@ -14,6 +14,8 @@ import {
   type BorderProps,
   type Display,
   type MarginProps,
+  type BackgroundProps,
+  generateBackgroundClasses,
 } from '@/lib/tailwind';
 
 type BoxElement = React.ElementRef<'div'>;
@@ -25,25 +27,29 @@ interface BoxProps
     SpaceBetweenProps,
     PaddingProps,
     MarginProps,
-    BorderProps {
+    BorderProps,
+    BackgroundProps {
   display?: Omit<Display, 'flex' | 'inline-flex'>;
   ['data-testid']?: string;
 }
 
 const Box = React.forwardRef<BoxElement, BoxProps>((props, forwardedRef) => {
-  const { children, id } = props;
+  const { children, id, className } = props;
 
   const layoutClasses = generateLayoutClasses(props);
   const sizingClasses = generateSizingClasses(props);
   const spacingClasses = generateSpacingClasses(props);
   const borderClasses = generateBorderClasses(props);
+  const backgroundClasses = generateBackgroundClasses(props);
 
   const classNames = cn(
     'block',
     layoutClasses,
     sizingClasses,
     spacingClasses,
-    borderClasses
+    borderClasses,
+    backgroundClasses,
+    className
   );
 
   return (
