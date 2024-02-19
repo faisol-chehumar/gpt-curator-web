@@ -9,7 +9,7 @@ const Hero = () => {
     <Flex
       direction={{ initial: 'col', md: 'row' }}
       height="screen"
-      align="center"
+      items="center"
       gap={2}
     >
       <Box

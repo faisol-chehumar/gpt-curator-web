@@ -9,6 +9,7 @@ import {
 import { Image } from '../ui/image';
 import { Grid } from '../ui/grid';
 import { Text } from '../ui/text';
+import { Flex } from '../ui/flex';
 
 import generalAssistant from '../../../public/images/general-assistant.png';
 
@@ -75,14 +76,20 @@ const MultiImagesCarousel = ({ items = [] }: MultiImagesCarouselProps) => {
                       ratio={1}
                       fill
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-slate-900/80 text-xl text-white">
-                      + 23
-                    </div>
+                    <Flex
+                      inset="0"
+                      positions="absolute"
+                      bgColor="slate-900/80"
+                      justify="center"
+                      items="center"
+                    >
+                      <Text className="items-center">+ 23</Text>
+                    </Flex>
                   </Grid>
                 </Grid>
               </CardContent>
               <CardFooter>
-                <Text variant="small" className="font-semibold">
+                <Text variant="small" weight="semibold">
                   {item.caption}
                 </Text>
               </CardFooter>
