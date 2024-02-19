@@ -1,4 +1,5 @@
 import React from 'react';
+import { cva } from 'class-variance-authority';
 
 import { cn } from '@/lib/tailwind/utils';
 import {
@@ -10,11 +11,23 @@ import {
 
 type TextElement = React.ElementRef<'p'>;
 
+const textVariants = cva(null, {
+  variants: {
+    variant: {
+      p: 'leading-7 [&:not(:first-child)]:mt-6',
+      small: 'text-sm font-medium leading-none',
+    },
+  },
+  defaultVariants: {
+    variant: 'p',
+  },
+});
+
 interface TextProps
   extends React.ComponentPropsWithoutRef<'p'>,
     TypographyProps,
     MarginProps {
-  variant?: 'p';
+  variant?: 'p' | 'small';
 }
 
 const Text = React.forwardRef<TextElement, TextProps>((props, forwardedRef) => {
@@ -23,14 +36,14 @@ const Text = React.forwardRef<TextElement, TextProps>((props, forwardedRef) => {
   const typographyClasses = generateTypographyClasses(props);
   const spacingClasses = generateSpacingClasses(props);
 
-  const className = cn(
-    'leading-7 [&:not(:first-child)]:mt-6',
-    typographyClasses,
-    spacingClasses
-  );
+  const className = cn(typographyClasses, spacingClasses);
 
   return (
-    <Tag ref={forwardedRef} id={id} className={className}>
+    <Tag
+      ref={forwardedRef}
+      id={id}
+      className={textVariants({ variant: Tag, className })}
+    >
       {children}
     </Tag>
   );

@@ -18,12 +18,10 @@ type FlexElement = React.ElementRef<'div'>;
 interface FlexProps
   extends React.ComponentPropsWithoutRef<'div'>,
     Omit<BoxProps, 'display'>,
-    FlexboxProps {
-  display?: 'flex' | 'inline-flex';
-}
+    FlexboxProps {}
 
 const Flex = React.forwardRef<FlexElement, FlexProps>((props, forwardedRef) => {
-  const { children, id } = props;
+  const { children, id, ...rest } = props;
 
   const layoutClasses = generateLayoutClasses(props);
   const flexboxClasses = generateFlexboxClasses(props);
@@ -41,7 +39,13 @@ const Flex = React.forwardRef<FlexElement, FlexProps>((props, forwardedRef) => {
   );
 
   return (
-    <div ref={forwardedRef} id={id} className={classNames}>
+    <div
+      ref={forwardedRef}
+      id={id}
+      data-testid={props['data-testid']}
+      className={classNames}
+      {...rest}
+    >
       {children}
     </div>
   );

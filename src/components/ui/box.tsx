@@ -27,6 +27,7 @@ interface BoxProps
     MarginProps,
     BorderProps {
   display?: Omit<Display, 'flex' | 'inline-flex'>;
+  ['data-testid']?: string;
 }
 
 const Box = React.forwardRef<BoxElement, BoxProps>((props, forwardedRef) => {

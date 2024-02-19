@@ -43,7 +43,6 @@ const Heading = React.forwardRef<HeadingElement, HeadingProps>(
       headingVariants({ variant: Tag }),
       typographyClasses,
       spacingClasses
-      // 'lg:text-8xl/[2rem]'
     );
 
     return (

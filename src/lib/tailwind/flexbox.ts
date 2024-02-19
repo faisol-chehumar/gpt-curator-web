@@ -17,8 +17,10 @@ type Gap = Responsive<string | number>;
 type AlignItems = Responsive<
   'start' | 'end' | 'center' | 'baseline' | 'stretch'
 >;
+type FlexDisplay = 'flex' | 'inline-flex';
 
 type FlexboxProps = {
+  display?: FlexDisplay;
   direction?: FlexDirection;
   wrap?: FlexWrap;
   gap?: Gap;
@@ -27,6 +29,7 @@ type FlexboxProps = {
 };
 
 const flexboxClassMapping: ClassMapping<FlexboxProps> = {
+  display: null,
   direction: 'flex',
   wrap: 'flex',
   gap: 'gap',
@@ -39,4 +42,4 @@ function generateFlexboxClasses(props: FlexboxProps) {
 }
 
 export { generateFlexboxClasses };
-export type { FlexboxProps };
+export type { FlexboxProps, FlexDisplay };

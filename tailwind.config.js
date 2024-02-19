@@ -49,6 +49,18 @@ module.exports = {
     {
       pattern: /^font-(bold|normal)/,
     },
+    {
+      pattern: /^(grid-cols|grid-rows)-([0-9]+(\.[0-5])?|96)/,
+      variants: responsiveVariants,
+    },
+    {
+      pattern: /^(col-span|row-span)-([0-9]+(\.[0-5])?|96)/,
+      variants: responsiveVariants,
+    },
+    {
+      pattern: /^(overflow)-(auto|hidden|visible|scroll|clip)/,
+      variants: responsiveVariants,
+    },
   ],
   theme: {
     container: {
