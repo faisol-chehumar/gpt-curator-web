@@ -46,9 +46,9 @@ module.exports = {
     {
       pattern: /^text-(left|right|center)/,
     },
-    {
-      pattern: /^font-(bold|normal)/,
-    },
+    // {
+    //   pattern: /^font-(light | normal | medium | bold | semibold)/,
+    // },
     {
       pattern: /^(grid-cols|grid-rows)-([0-9]+(\.[0-5])?|96)/,
       variants: responsiveVariants,
@@ -59,6 +59,14 @@ module.exports = {
     },
     {
       pattern: /^(overflow)-(auto|hidden|visible|scroll|clip)/,
+      variants: responsiveVariants,
+    },
+    {
+      pattern: /^(inset)-(0)/,
+      variants: responsiveVariants,
+    },
+    {
+      pattern: /^(bg)-(slate-900\/80)/,
       variants: responsiveVariants,
     },
   ],
