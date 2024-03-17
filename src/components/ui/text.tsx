@@ -15,7 +15,8 @@ const textVariants = cva(null, {
   variants: {
     variant: {
       p: 'leading-7 [&:not(:first-child)]:mt-6',
-      small: 'text-sm font-medium leading-none',
+      small: 'text-xs font-medium leading-none',
+      span: 'text-sm leading-none',
     },
   },
   defaultVariants: {
@@ -27,7 +28,7 @@ interface TextProps
   extends React.ComponentPropsWithoutRef<'p'>,
     TypographyProps,
     MarginProps {
-  variant?: 'p' | 'small';
+  variant?: 'p' | 'small' | 'span';
 }
 
 const Text = React.forwardRef<TextElement, TextProps>((props, forwardedRef) => {
@@ -36,14 +37,14 @@ const Text = React.forwardRef<TextElement, TextProps>((props, forwardedRef) => {
   const typographyClasses = generateTypographyClasses(props);
   const spacingClasses = generateSpacingClasses(props);
 
-  const className = cn(typographyClasses, spacingClasses);
+  const className = cn(
+    textVariants({ variant: Tag }),
+    typographyClasses,
+    spacingClasses
+  );
 
   return (
-    <Tag
-      ref={forwardedRef}
-      id={id}
-      className={textVariants({ variant: Tag, className })}
-    >
+    <Tag ref={forwardedRef} id={id} className={className}>
       {children}
     </Tag>
   );

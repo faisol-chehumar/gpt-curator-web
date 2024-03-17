@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Card, CardContent, CardFooter } from '../ui/card';
+import { Card, CardContent, CardFooter, CardTitle } from '../ui/card';
 import {
   Carousel,
   CarouselContent,
@@ -14,10 +14,16 @@ import { Text } from '../ui/text';
 import { badgeVariants } from '../ui/badge';
 import { Flex } from '../ui/flex';
 
+interface Tag {
+  name: string;
+  href: string;
+}
+
 interface Items {
   images: string[];
   href: string;
   caption: string;
+  tags: Tag[];
 }
 
 interface MultiImagesCarouselProps {
@@ -49,15 +55,18 @@ const MultiImagesCarousel = ({ items = [] }: MultiImagesCarouselProps) => {
                 </Grid>
               </CardContent>
               <CardFooter className="flex-col items-start space-y-3">
-                <Text variant="small" weight="semibold">
-                  {item.caption}
-                </Text>
-                <Link
-                  className={badgeVariants({ variant: 'default' })}
-                  href="/xxx"
-                >
-                  Badge
-                </Link>
+                <CardTitle>{item.caption}</CardTitle>
+                <Flex gap={1} width="full">
+                  {item.tags.map((tag, idx) => (
+                    <Link
+                      key={idx}
+                      className={badgeVariants({ variant: 'default' })}
+                      href={tag.href}
+                    >
+                      <Text variant="small">{tag.name}</Text>
+                    </Link>
+                  ))}
+                </Flex>
               </CardFooter>
             </Card>
           </CarouselItem>
